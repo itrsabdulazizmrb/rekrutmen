@@ -1,4 +1,4 @@
-                </div>
+</div>
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <?php if ($title == 'Login') : ?>
                     <p class="mb-4 text-sm mx-auto">
@@ -26,10 +26,9 @@
               </div>
             </div>
             <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-              <div class="position-relative bg-gradient-dark h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('<?= base_url('assets/img/gallery-auth-side-bg.jpg') ?>'); background-size: cover;">
+              <div class="position-relative bg-gradient-dark h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('<?= base_url('assets/img/hospital-bg.png') ?>'); background-size: cover;">
                 <span class="mask bg-gradient-dark opacity-6"></span>
                 <div class="position-relative">
-                  <i class="fas fa-hospital text-success fa-3x mb-3"></i>
                   <h4 class="text-white font-weight-bolder">SIREK RSHAA</h4>
                   <p class="text-white mb-4">Sistem Informasi Rekrutmen RSUD H. Abdul Aziz Marabahan</p>
                   <div class="d-flex justify-content-center">
