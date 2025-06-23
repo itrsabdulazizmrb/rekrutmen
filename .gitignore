@@ -1,0 +1,292 @@
+# ===================================
+# SIREK - Sistem Rekrutmen Online
+# Git Ignore File
+# ===================================
+
+# ===================================
+# UPLOADED FILES - IGNORE ALL UPLOADS
+# ===================================
+
+# Upload directories
+uploads/
+uploads/*
+uploads/**/*
+
+# Specific upload folders
+uploads/cv/
+uploads/cv/*
+uploads/documents/
+uploads/documents/*
+uploads/profile_pictures/
+uploads/profile_pictures/*
+uploads/answers/
+uploads/answers/*
+uploads/resumes/
+uploads/resumes/*
+
+# ===================================
+# DOCUMENT FILES - BY EXTENSION
+# ===================================
+
+# PDF Files
+*.pdf
+*.PDF
+
+# Microsoft Word Documents
+*.doc
+*.docx
+*.DOC
+*.DOCX
+
+# Microsoft Excel
+*.xls
+*.xlsx
+*.XLS
+*.XLSX
+
+# Microsoft PowerPoint
+*.ppt
+*.pptx
+*.PPT
+*.PPTX
+
+# ===================================
+# IMAGE FILES
+# ===================================
+
+# Common image formats
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+*.ico
+*.JPG
+*.JPEG
+*.PNG
+*.GIF
+*.BMP
+*.TIFF
+*.TIF
+*.WEBP
+*.SVG
+*.ICO
+
+# ===================================
+# ARCHIVE FILES
+# ===================================
+
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
+*.ZIP
+*.RAR
+*.7Z
+*.TAR
+*.GZ
+*.BZ2
+*.XZ
+
+# ===================================
+# CODEIGNITER SPECIFIC
+# ===================================
+
+# CodeIgniter cache
+application/cache/*
+!application/cache/index.html
+
+# CodeIgniter logs
+application/logs/*
+!application/logs/index.html
+
+# CodeIgniter sessions (if file-based)
+application/sessions/*
+!application/sessions/index.html
+
+# Keep .htaccess files
+!application/*/.htaccess
+
+# ===================================
+# DEVELOPMENT FILES
+# ===================================
+
+# IDE and Editor files
+.vscode/
+.idea/*
+/nbproject/
+*.sublime-project
+*.sublime-workspace
+.atom/
+.brackets.json
+
+# Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===================================
+# TEMPORARY FILES
+# ===================================
+
+# Temporary files
+*.tmp
+*.temp
+*.TMP
+*.TEMP
+*~
+*.swp
+*.swo
+*.bak
+*.backup
+
+# ===================================
+# DATABASE FILES
+# ===================================
+
+# Database dumps
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+
+# Database backup files
+backup_*.sql
+dump_*.sql
+*_backup.sql
+
+# Test database
+tests/mocks/database/ci_test.sqlite
+
+# ===================================
+# CONFIGURATION FILES (SENSITIVE)
+# ===================================
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# Configuration files with sensitive data
+application/config/database.php.local
+application/config/config.php.local
+
+# ===================================
+# VENDOR AND DEPENDENCIES
+# ===================================
+
+# Composer
+/vendor/
+composer.lock
+
+# Node modules (if using)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================================
+# BUILD AND DIST FILES
+# ===================================
+
+# Build directories
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+build/
+dist/
+public/build/
+
+# Compiled CSS and JS
+*.min.css
+*.min.js
+
+# ===================================
+# TESTING FILES
+# ===================================
+
+# PHPUnit
+phpunit.xml
+.phpunit.result.cache
+/tests/tests/
+/tests/results/
+tests/_output/*
+tests/_support/_generated
+
+# Coverage reports
+coverage/
+clover.xml
+
+# ===================================
+# SECURITY FILES
+# ===================================
+
+# Private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# SSL certificates
+*.crt
+*.cer
+
+# ===================================
+# CUSTOM EXCEPTIONS
+# ===================================
+
+# Keep important directories but ignore contents
+!uploads/.gitkeep
+!uploads/cv/.gitkeep
+!uploads/documents/.gitkeep
+!uploads/profile_pictures/.gitkeep
+!uploads/answers/.gitkeep
+!uploads/gambar_soal/.gitkeep
+
+# Keep sample files for documentation
+!uploads/samples/
+uploads/samples/*.pdf
+uploads/samples/*.doc
+uploads/samples/*.docx
+uploads/samples/*.jpg
+uploads/samples/*.png
+
+# ===================================
+# PROJECT SPECIFIC
+# ===================================
+
+# Temporary PHP files for debugging
+check_*.php
+fix_*.php
+test_*.php
+debug_*.php
+
+# Backup files
+*.backup
+*_backup.*
+backup_*
+
+# ===================================
+# END OF GITIGNORE
+# ===================================
+PERBAIKAN_PROFIL_PELAMAR_ADMIN.md
+PERBAIKAN_UNDEFINED_PROPERTY_PERAN.md
