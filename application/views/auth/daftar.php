@@ -23,6 +23,6 @@
     </label>
   </div>
   <div class="text-center">
-    <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Daftar</button>
+    <button type="submit" class="btn btn-lg btn-success btn-lg w-100 mt-4 mb-0">Daftar</button>
   </div>
 <?= form_close() ?>

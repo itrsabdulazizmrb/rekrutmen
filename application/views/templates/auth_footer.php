@@ -26,14 +26,14 @@
               </div>
             </div>
             <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-              <div class="position-relative bg-gradient-success h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('<?= base_url('assets/img/gallery-auth-side-bg.jpg') ?>'); background-size: cover;">
-                <span class="mask bg-gradient-success opacity-6"></span>
+              <div class="position-relative bg-gradient-dark h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('<?= base_url('assets/img/gallery-auth-side-bg.jpg') ?>'); background-size: cover;">
+                <span class="mask bg-gradient-dark opacity-6"></span>
                 <div class="position-relative">
-                  <i class="fas fa-leaf text-warning fa-3x mb-3"></i>
-                  <h4 class="text-white font-weight-bolder">Gallery Kembang Ilung</h4>
-                  <p class="text-white mb-4">Destinasi seni kerajinan tradisional yang melestarikan warisan budaya Indonesia melalui anyaman eceng gondok berkualitas tinggi.</p>
+                  <i class="fas fa-hospital text-success fa-3x mb-3"></i>
+                  <h4 class="text-white font-weight-bolder">SIREK RSHAA</h4>
+                  <p class="text-white mb-4">Sistem Informasi Rekrutmen RSUD H. Abdul Aziz Marabahan</p>
                   <div class="d-flex justify-content-center">
-                    <div class="text-center mx-2">
+                    <!-- <div class="text-center mx-2">
                       <i class="fas fa-hands text-warning fa-lg mb-1"></i>
                       <p class="text-white text-xs mb-0">Kerajinan Tangan</p>
                     </div>
@@ -44,7 +44,7 @@
                     <div class="text-center mx-2">
                       <i class="fas fa-award text-warning fa-lg mb-1"></i>
                       <p class="text-white text-xs mb-0">Kualitas Terjamin</p>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>

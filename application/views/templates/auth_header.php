@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('assets/img/apple-icon.png') ?>">
   <link rel="icon" type="image/png" href="<?= base_url('assets/img/gallery-logo.png') ?>">
   <title>
-    <?= $title ?> - Gallery Kembang Ilung
+    <?= $title ?> - Rekrutmen RSUD H. Abdul Aziz Marabahan
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -36,9 +36,9 @@
                   <h4 class="font-weight-bolder"><?= $title ?></h4>
                   <p class="mb-0">
                     <?php if ($title == 'Login') : ?>
-                      Masuk ke akun Gallery Kembang Ilung Anda
+                      Masuk ke akun SIREK RSHAA anda
                     <?php elseif ($title == 'Daftar') : ?>
-                      Bergabunglah dengan komunitas Gallery Kembang Ilung
+                      Daftar akun SIREK RSHAA
                     <?php elseif ($title == 'Lupa Password') : ?>
                       Masukkan email Anda untuk reset password
                     <?php elseif ($title == 'Reset Password') : ?>
