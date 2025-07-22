@@ -72,6 +72,7 @@
                 background: #2c3e50;
                 transform: translateX(-100%);
                 transition: transform 0.3s;
+                z-index: 1050;
             }
             .navigation-panel.show-nav {
                 transform: translateX(0);
@@ -313,9 +314,48 @@
                 padding: 8px 15px;
             }
         }
+
+        @media (max-width: 991.98px) {
+            .control-buttons {
+                position: static;
+                width: 100%;
+                background: none;
+                box-shadow: none;
+                padding: 0;
+                flex-direction: row;
+                gap: 0;
+            }
+            .btn-cat {
+                width: 48vw;
+                max-width: 180px;
+                font-size: 1.1rem;
+                margin-bottom: 0 !important;
+            }
+            .question-area {
+                padding-bottom: 20px !important;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .btn-cat {
+                width: 100%;
+                max-width: none;
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+            .control-buttons {
+                flex-direction: column;
+                gap: 8px;
+                padding: 0;
+            }
+        }
     </style>
 </head>
 <body>
+<?php
+$waktu_mulai = isset($applicant_assessment->waktu_mulai) ? strtotime($applicant_assessment->waktu_mulai) : null;
+$now_server = time();
+?>
 <button class="toggle-nav-btn d-lg-none" id="toggleNavBtn" onclick="toggleNav()"><i class="fas fa-bars"></i></button>
 <div class="cat-container">
     <!-- Navigation Panel -->
@@ -418,6 +458,30 @@
                                       onchange="saveEssayAnswer()"><?= htmlspecialchars($current_question->teks_jawaban ?? '') ?></textarea>
                         <?php endif; ?>
                     </div>
+                    <div class="control-buttons mt-4">
+                        <div>
+                            <?php if ($question_number > 1): ?>
+                                <button class="btn btn-secondary btn-cat" onclick="navigateToQuestion(<?= $question_number - 1 ?>)">
+                                    <i class="fas fa-chevron-left me-2"></i>Sebelumnya
+                                </button>
+                            <?php endif; ?>
+                        </div>
+                        <div>
+                            <button class="btn btn-warning btn-cat me-2" id="markButton" onclick="toggleMarkQuestion()">
+                                <i class="fas fa-flag me-2"></i>
+                                <span id="markText"><?= $current_question->ditandai_ragu ? 'Batal Ragu' : 'Tandai Ragu' ?></span>
+                            </button>
+                            <?php if ($question_number < $total_questions): ?>
+                                <button class="btn btn-primary btn-cat" onclick="navigateToQuestion(<?= $question_number + 1 ?>)">
+                                    Selanjutnya<i class="fas fa-chevron-right ms-2"></i>
+                                </button>
+                            <?php else: ?>
+                                <button class="btn btn-success btn-cat" onclick="showSubmitConfirmation()">
+                                    <i class="fas fa-check me-2"></i>Selesai
+                                </button>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             <?php else: ?>
                 <div class="text-center py-5">
@@ -425,34 +489,6 @@
                     <p class="text-muted">Terjadi kesalahan dalam memuat soal.</p>
                 </div>
             <?php endif; ?>
-        </div>
-
-        <!-- Control Buttons -->
-        <div class="control-buttons">
-            <div>
-                <?php if ($question_number > 1): ?>
-                    <button class="btn btn-secondary btn-cat" onclick="navigateToQuestion(<?= $question_number - 1 ?>)">
-                        <i class="fas fa-chevron-left me-2"></i>Sebelumnya
-                    </button>
-                <?php endif; ?>
-            </div>
-
-            <div>
-                <button class="btn btn-warning btn-cat me-2" id="markButton" onclick="toggleMarkQuestion()">
-                    <i class="fas fa-flag me-2"></i>
-                    <span id="markText"><?= $current_question->ditandai_ragu ? 'Batal Ragu' : 'Tandai Ragu' ?></span>
-                </button>
-
-                <?php if ($question_number < $total_questions): ?>
-                    <button class="btn btn-primary btn-cat" onclick="navigateToQuestion(<?= $question_number + 1 ?>)">
-                        Selanjutnya<i class="fas fa-chevron-right ms-2"></i>
-                    </button>
-                <?php else: ?>
-                    <button class="btn btn-success btn-cat" onclick="showSubmitConfirmation()">
-                        <i class="fas fa-check me-2"></i>Selesai
-                    </button>
-                <?php endif; ?>
-            </div>
         </div>
     </div>
 </div>
@@ -480,37 +516,43 @@
     const questionType = '<?= $current_question ? $current_question->jenis_soal : '' ?>';
     let isMarkedDoubtful = <?= $current_question && $current_question->ditandai_ragu ? 'true' : 'false' ?>;
 
-    
+    // Tambahkan di awal script
+    const securityViolationKey = 'cat_security_violation_count_<?= isset($application_id) ? $application_id : 'ujian' ?>';
+    localStorage.setItem(securityViolationKey, '0');
+    let securityViolationCount = 0;
+
+    const waktuMulai = <?= $waktu_mulai ? $waktu_mulai : 'null' ?>;
+    const nowServer = <?= $now_server ?>;
+    const batasWaktu = <?= $assessment->batas_waktu ?> * 60; // detik
+    let timeRemaining = waktuMulai ? (waktuMulai + batasWaktu) - nowServer : batasWaktu;
+
+    let isExamActive = true;
+    let focusLossTimeout = null;
+    let focusLossInterval = null;
+    let focusLossCountdownActive = false;
+
     document.addEventListener('DOMContentLoaded', function() {
         initializeTimer();
         updateNavigationStatus();
         preventBrowserActions();
-        enterFullscreen();
     });
 
     
     function initializeTimer() {
         const timerElement = document.getElementById('assessmentTimer');
-        const timeLimit = parseInt(timerElement.getAttribute('data-time-limit')) * 60; 
-        let timeRemaining = timeLimit;
-
         const timerInterval = setInterval(function() {
             const minutes = Math.floor(timeRemaining / 60);
             const seconds = timeRemaining % 60;
-
             document.getElementById('timeRemaining').textContent =
                 String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
-
-            if (timeRemaining <= 300) { 
+            if (timeRemaining <= 300) {
                 timerElement.style.background = '#e74c3c';
                 timerElement.style.animation = 'pulse 1s infinite';
             }
-
             if (timeRemaining <= 0) {
                 clearInterval(timerInterval);
                 autoSubmitAssessment();
             }
-
             timeRemaining--;
         }, 1000);
     }
@@ -813,72 +855,6 @@
         .catch(error => console.error('Error:', error));
     }
 
-    
-    let isExamActive = true;
-    let fullscreenAttempts = 0;
-    let maxFullscreenAttempts = 3;
-
-    function enterFullscreen() {
-        const elem = document.documentElement;
-
-        
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen({ navigationUI: "hide" });
-        } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-        } else if (elem.mozRequestFullScreen) {
-            elem.mozRequestFullScreen();
-        } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-        }
-
-        
-        document.addEventListener('fullscreenchange', handleFullscreenChange);
-        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
-        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
-        document.addEventListener('MSFullscreenChange', handleFullscreenChange);
-    }
-
-    function handleFullscreenChange() {
-        if (!isExamActive) return;
-
-        const isFullscreen = !!(document.fullscreenElement ||
-                               document.webkitFullscreenElement ||
-                               document.mozFullScreenElement ||
-                               document.msFullscreenElement);
-
-        if (!isFullscreen) {
-            fullscreenAttempts++;
-
-            if (fullscreenAttempts >= maxFullscreenAttempts) {
-                Swal.fire({
-                    title: 'Ujian Dihentikan!',
-                    text: 'Anda telah keluar dari mode fullscreen terlalu sering. Ujian akan dikumpulkan secara otomatis.',
-                    icon: 'error',
-                    allowOutsideClick: false,
-                    allowEscapeKey: false,
-                    showConfirmButton: false,
-                    timer: 5000
-                }).then(() => {
-                    autoSubmitAssessment();
-                });
-            } else {
-                const remainingAttempts = maxFullscreenAttempts - fullscreenAttempts;
-                Swal.fire({
-                    title: 'Peringatan Keamanan!',
-                    text: `Anda tidak diperbolehkan keluar dari mode fullscreen! Sisa peringatan: ${remainingAttempts}`,
-                    icon: 'warning',
-                    allowOutsideClick: false,
-                    allowEscapeKey: false,
-                    confirmButtonText: 'Kembali ke Ujian'
-                }).then(() => {
-                    
-                    setTimeout(enterFullscreen, 100);
-                });
-            }
-        }
-    }
-
     function preventBrowserActions() {
         
         document.addEventListener('contextmenu', e => {
@@ -993,15 +969,7 @@
                 logSecurityViolation('Window lost focus');
                 setTimeout(() => {
                     window.focus();
-                    enterFullscreen();
                 }, 100);
-            }
-        });
-
-        
-        document.addEventListener('mouseleave', function() {
-            if (isExamActive) {
-                logSecurityViolation('Mouse left exam area');
             }
         });
 
@@ -1065,7 +1033,25 @@
     }
 
     function showSecurityWarning(message) {
-        
+        // Tambahkan counter setiap kali peringatan muncul
+        securityViolationCount++;
+        localStorage.setItem(securityViolationKey, securityViolationCount);
+
+        // Jika sudah 3x, ujian otomatis selesai
+        if (securityViolationCount >= 3) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Ujian Dihentikan',
+                text: 'Anda telah 3 kali melakukan pelanggaran keamanan. Ujian dihentikan otomatis.',
+                allowOutsideClick: false,
+                allowEscapeKey: false
+            }).then(() => {
+                finishExam('Ujian dihentikan karena pelanggaran keamanan 3x');
+            });
+            return;
+        }
+
+        // Tampilkan warning biasa jika belum 3x
         const warning = document.createElement('div');
         warning.style.cssText = `
             position: fixed;
@@ -1079,9 +1065,8 @@
             font-weight: bold;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         `;
-        warning.textContent = message;
+        warning.textContent = message + ` (Peringatan ke-${securityViolationCount}/3)`;
         document.body.appendChild(warning);
-
         setTimeout(() => {
             if (warning.parentNode) {
                 warning.parentNode.removeChild(warning);
@@ -1159,37 +1144,11 @@
         }).then(() => {
             saveCurrentAnswer();
 
-            
-            exitFullscreen();
-
             setTimeout(() => {
                 document.getElementById('submitForm').submit();
             }, 500);
         });
     }
-
-    function exitFullscreen() {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-        } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-        }
-    }
-
-    
-    let allowNavigation = false;
-
-    window.addEventListener('beforeunload', function(e) {
-        if (isExamActive && !allowNavigation) {
-            e.preventDefault();
-            e.returnValue = 'Anda yakin ingin meninggalkan ujian? Jawaban yang belum disimpan akan hilang.';
-            return e.returnValue;
-        }
-    });
 
     function toggleNav() {
         const navPanel = document.getElementById('navigationPanel');
@@ -1215,6 +1174,136 @@
             document.getElementById('navigationPanel').classList.remove('show-nav');
         }
     }
-    </script>
+
+    // Gunakan localStorage agar reload tidak mengulang counter
+    const pelanggaranKey = 'cat_pelanggaran_count_<?= isset($application_id) ? $application_id : 'ujian' ?>';
+    let pelanggaran = parseInt(localStorage.getItem(pelanggaranKey) || '0');
+
+    function logKecuranganCAT() {
+        // Kirim ke backend (opsional, untuk log)
+        fetch('<?= base_url('pelamar/log_security_violation') ?>', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'applicant_assessment_id=<?= isset($applicant_assessment_id) ? $applicant_assessment_id : '' ?>&question_id=&violation=Tab/Window switched&timestamp=' + Date.now()
+        });
+    }
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            pelanggaran++;
+            localStorage.setItem(pelanggaranKey, pelanggaran);
+            logKecuranganCAT();
+            if (pelanggaran < 3) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Peringatan Kecurangan',
+                    text: 'Anda terdeteksi berpindah tab/jendela atau membuka aplikasi lain saat ujian. Jika terjadi 3 kali, ujian akan dihentikan otomatis. (Peringatan ke-' + pelanggaran + '/3)',
+                    confirmButtonText: 'Kembali ke Ujian',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ujian Dihentikan',
+                    text: 'Anda telah 3 kali terdeteksi melakukan pelanggaran. Ujian dihentikan otomatis.',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false
+                }).then(() => {
+                    // Submit ujian otomatis (bisa AJAX atau redirect ke endpoint selesai)
+                    window.location.href = '<?= base_url('pelamar/kirim_penilaian_cat') ?>';
+                });
+            }
+        }
+    });
+
+    // Event tambahan untuk deteksi split-screen/floating app di HP
+    window.addEventListener('blur', function() {
+        // Perlakuan sama seperti visibilitychange
+        securityViolationCount++;
+        localStorage.setItem(securityViolationKey, securityViolationCount);
+        if (securityViolationCount >= 3) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Ujian Dihentikan',
+                text: 'Anda telah 3 kali melakukan pelanggaran keamanan. Ujian dihentikan otomatis.',
+                allowOutsideClick: false,
+                allowEscapeKey: false
+            }).then(() => {
+                finishExam('Ujian dihentikan karena pelanggaran keamanan 3x');
+            });
+            return;
+        }
+        showSecurityWarning('Fokus Anda hilang dari browser! (Peringatan ke-' + securityViolationCount + '/3)');
+    });
+
+    // Fungsi untuk mulai timer 3 detik saat kehilangan fokus
+    function startFocusLossTimer() {
+        if (focusLossTimeout || focusLossCountdownActive) return;
+        focusLossCountdownActive = true;
+        let timeLeft = 3;
+        const countdownDiv = document.getElementById('focus-loss-countdown');
+        const timerSpan = document.getElementById('focus-loss-timer');
+        countdownDiv.style.display = 'block';
+        timerSpan.textContent = timeLeft;
+        focusLossInterval = setInterval(() => {
+            timeLeft--;
+            timerSpan.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(focusLossInterval);
+                focusLossInterval = null;
+                focusLossTimeout = null;
+                focusLossCountdownActive = false;
+                countdownDiv.style.display = 'none';
+                finishExam('Ujian dihentikan karena Anda tidak kembali ke browser dalam 3 detik setelah kehilangan fokus.');
+            }
+        }, 1000);
+        focusLossTimeout = setTimeout(() => {
+            if (focusLossInterval) clearInterval(focusLossInterval);
+            focusLossTimeout = null;
+            focusLossCountdownActive = false;
+            countdownDiv.style.display = 'none';
+            finishExam('Ujian dihentikan karena Anda tidak kembali ke browser dalam 3 detik setelah kehilangan fokus.');
+        }, 3000);
+    }
+
+    // Fungsi untuk membatalkan timer jika kembali fokus
+    function cancelFocusLossTimer() {
+        if (focusLossTimeout) {
+            clearTimeout(focusLossTimeout);
+            focusLossTimeout = null;
+        }
+        if (focusLossInterval) {
+            clearInterval(focusLossInterval);
+            focusLossInterval = null;
+        }
+        focusLossCountdownActive = false;
+        const countdownDiv = document.getElementById('focus-loss-countdown');
+        countdownDiv.style.display = 'none';
+    }
+
+    // Event kehilangan fokus (blur/visibilitychange)
+    window.addEventListener('blur', function() {
+        if (typeof isExamActive === 'undefined' || isExamActive === false) return;
+        startFocusLossTimer();
+    });
+    document.addEventListener('visibilitychange', function() {
+        if (typeof isExamActive === 'undefined' || isExamActive === false) return;
+        if (document.hidden) {
+            startFocusLossTimer();
+        } else {
+            cancelFocusLossTimer();
+        }
+    });
+    window.addEventListener('focus', function() {
+        if (typeof isExamActive === 'undefined' || isExamActive === false) return;
+        cancelFocusLossTimer();
+    });
+</script>
+
+<!-- Countdown kehilangan fokus (pojok kanan atas) -->
+<div id="focus-loss-countdown" style="display:none; position:fixed; top:20px; right:20px; background:#e74c3c; color:#fff; padding:16px 28px; border-radius:8px; font-size:2rem; font-weight:bold; z-index:9999; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+  Kehilangan fokus! Ujian akan dihentikan dalam <span id="focus-loss-timer">3</span> detik
+</div>
 </body>
 </html>
