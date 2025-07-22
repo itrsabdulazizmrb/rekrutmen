@@ -66,7 +66,7 @@
                         <?php endif; ?>
                       </div>
                       <h5 class="card-title"><?= $job->judul ?></h5>
-                      <p class="card-text text-sm mb-1"><i class="fas fa-building me-1"></i> <?= $job->company_name ?? 'SIREK Company' ?></p>
+                      <p class="card-text text-sm mb-1"><i class="fas fa-building me-1"></i> <?= $job->company_name ?? 'RSUD H. Abdul Aziz Marabahan' ?></p>
                       <p class="card-text text-sm mb-1"><i class="fas fa-map-marker-alt me-1"></i> <?= $job->lokasi ?></p>
                       <p class="card-text text-sm mb-1"><i class="fas fa-tag me-1"></i> <?= $job->category_name ?></p>
                       <?php if ($job->rentang_gaji) : ?>

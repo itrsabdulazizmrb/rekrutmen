@@ -8,7 +8,7 @@
           </div>
           <div>
             <h6 class="mb-0">Development Guide</h6>
-            <p class="text-sm mb-0">Panduan lengkap pengembangan sistem SIREK</p>
+            <p class="text-sm mb-0">Panduan lengkap pengembangan sistem rekrutmen RSUD H. Abdul Aziz Marabahan</p>
           </div>
         </div>
       </div>
@@ -17,10 +17,10 @@
         <div class="row">
           <div class="col-12">
             <h5 class="text-gradient text-primary">📁 Struktur Proyek</h5>
-            <p>SIREK menggunakan framework CodeIgniter 3 dengan struktur MVC (Model-View-Controller):</p>
+            <p>Sistem rekrutmen ini menggunakan framework CodeIgniter 3 dengan struktur MVC (Model-View-Controller):</p>
 
             <div class="file-tree">
-              <div class="folder">sirek/</div>
+              <div class="folder">rekrutmen_rsud/</div>
               <ul>
                 <li><span class="folder">application/</span>
                   <ul>
@@ -67,8 +67,8 @@
               <div>
                 <h6>Clone Repository</h6>
                 <div class="code-block">
-git clone https://github.com/username/sirek.git
-cd sirek
+git clone https://github.com/username/rekrutmen_rsud.git
+cd rekrutmen_rsud
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@ $db['default'] = array(
     'hostname' => 'localhost',
     'username' => 'your_username',
     'password' => 'your_password',
-    'database' => 'sirek_db',
+    'database' => 'rsud_rekrutmen_db',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,
@@ -104,8 +104,8 @@ $db['default'] = array(
                 <h6>Import Database</h6>
                 <p>Import file SQL yang tersedia di folder <code>database/</code>:</p>
                 <div class="code-block">
-mysql -u username -p sirek_db < database/sirek_structure.sql
-mysql -u username -p sirek_db < database/sirek_data.sql
+mysql -u username -p rsud_rekrutmen_db < database/rekrutmen_structure.sql
+mysql -u username -p rsud_rekrutmen_db < database/rekrutmen_data.sql
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ mysql -u username -p sirek_db < database/sirek_data.sql
                 <h6>Konfigurasi Base URL</h6>
                 <p>Edit file <code>application/config/config.php</code>:</p>
                 <div class="code-block">
-$config['base_url'] = 'http://localhost/sirek/';
+$config['base_url'] = 'http://localhost/rekrutmen_rsud/';
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ $config['base_url'] = 'http://localhost/sirek/';
             <hr class="horizontal dark">
 
             <h5 class="text-gradient text-primary">🗄️ Database Schema</h5>
-            <p>Struktur database utama SIREK:</p>
+            <p>Struktur database utama sistem rekrutmen:</p>
 
             <div class="row">
               <div class="col-md-6">

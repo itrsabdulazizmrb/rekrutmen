@@ -8,7 +8,7 @@
           </div>
           <div>
             <h6 class="mb-0">Interactive Flowcharts</h6>
-            <p class="text-sm mb-0">Visual representation of SIREK system processes and workflows</p>
+            <p class="text-sm mb-0">Visual representation of system processes and workflows</p>
           </div>
         </div>
       </div>
@@ -351,7 +351,7 @@
 // Flowchart Data Definitions
 const flowchartData = {
   development: {
-    title: 'SIREK Development Workflow',
+    title: 'Development Workflow',
     nodes: [
       {
         id: 'planning',
@@ -465,7 +465,7 @@ const flowchartData = {
           ],
           code: '// Example: Production config\n' +
                 'define("ENVIRONMENT", "production");\n' +
-                '$config["base_url"] = "https://sirek.example.com/";\n' +
+                '$config["base_url"] = "https://rsud-marabahan.go.id/";\n' +
                 '$config["log_threshold"] = 1;'
         }
       }
@@ -685,7 +685,7 @@ function renderAuthFlowchart() {
   if (!container) return;
 
   const authData = {
-    title: 'SIREK Authentication Flow',
+    title: 'Authentication Flow',
     nodes: [
       {
         id: 'login_form',

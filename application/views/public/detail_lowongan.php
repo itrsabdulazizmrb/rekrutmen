@@ -57,7 +57,7 @@
                   <i class="fas fa-building opacity-10"></i>
                 </div>
                 <div class="ms-2">
-                  <p class="text-sm mb-0">Perusahaan: <span class="font-weight-bold"><?= $job->company_name ?? 'SIREK Company' ?></span></p>
+                  <p class="text-sm mb-0">Perusahaan: <span class="font-weight-bold"><?= $job->company_name ?? 'RSUD H. Abdul Aziz Marabahan' ?></span></p>
                 </div>
               </div>
               <div class="d-flex align-items-center mb-2">
@@ -147,7 +147,7 @@
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?= current_url() ?>" target="_blank" class="btn btn-facebook btn-icon-only me-2">
               <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
             </a>
-            <a href="https://twitter.com/intent/tweet?url=<?= current_url() ?>&text=<?= $job->judul ?> - SIREK" target="_blank" class="btn btn-twitter btn-icon-only me-2">
+            <a href="https://twitter.com/intent/tweet?url=<?= current_url() ?>&text=<?= $job->judul ?> - RSUD H. Abdul Aziz Marabahan" target="_blank" class="btn btn-twitter btn-icon-only me-2">
               <span class="btn-inner--icon"><i class="fab fa-twitter"></i></span>
             </a>
             <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?= current_url() ?>" target="_blank" class="btn btn-linkedin btn-icon-only me-2">
@@ -156,7 +156,7 @@
             <a href="https://wa.me/?text=<?= $job->judul ?> - <?= current_url() ?>" target="_blank" class="btn btn-whatsapp btn-icon-only me-2">
               <span class="btn-inner--icon"><i class="fab fa-whatsapp"></i></span>
             </a>
-            <a href="mailto:?subject=<?= $job->judul ?> - SIREK&body=Lihat lowongan pekerjaan ini: <?= current_url() ?>" class="btn btn-google-plus btn-icon-only">
+            <a href="mailto:?subject=<?= $job->judul ?> - RSUD H. Abdul Aziz Marabahan&body=Lihat lowongan pekerjaan ini: <?= current_url() ?>" class="btn btn-google-plus btn-icon-only">
               <span class="btn-inner--icon"><i class="fas fa-envelope"></i></span>
             </a>
           </div>
@@ -184,18 +184,18 @@
       <!-- Company Info Card -->
       <div class="card mt-4">
         <div class="card-body p-4">
-          <h5 class="mb-3">Tentang Gallery Kembang Ilung</h5>
+          <h5 class="mb-3">Tentang RSUD H. Abdul Aziz Marabahan</h5>
           <div class="text-center mb-3">
-            <img src="<?= base_url('assets/img/gallery-logo.png') ?>" alt="Gallery Kembang Ilung Logo" class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="<?= base_url('assets/img/gallery-logo.png') ?>" alt="Logo RSUD H. Abdul Aziz Marabahan" class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
           </div>
-          <h6 class="text-center mb-3 text-gray">Gallery Kembang Ilung</h6>
-          <p class="text-sm">Gallery Kembang Ilung adalah destinasi wisata seni kerajinan tradisional yang mengkhususkan diri pada anyaman eceng gondok. Kami melestarikan warisan budaya Indonesia melalui produk kerajinan berkualitas tinggi yang dibuat oleh pengrajin lokal berpengalaman.</p>
+          <h6 class="text-center mb-3 text-gray">RSUD H. Abdul Aziz Marabahan</h6>
+          <p class="text-sm">RSUD H. Abdul Aziz Marabahan adalah rumah sakit umum daerah yang berkomitmen untuk memberikan pelayanan kesehatan berkualitas dan menjadi pusat rujukan di wilayahnya. Kami didukung oleh tenaga medis profesional dan fasilitas modern untuk melayani masyarakat.</p>
           <div class="d-flex align-items-center mb-2">
             <div class="icon icon-shape icon-xs bg-gradient-success shadow text-center">
-              <i class="fas fa-leaf opacity-10"></i>
+              <i class="fas fa-hospital opacity-10"></i>
             </div>
             <div class="ms-2">
-              <p class="text-sm mb-0">Spesialisasi: Anyaman Eceng Gondok & Kerajinan Tradisional</p>
+              <p class="text-sm mb-0">Jenis: Rumah Sakit Umum Daerah</p>
             </div>
           </div>
           <div class="d-flex align-items-center mb-2">
@@ -203,23 +203,23 @@
               <i class="fas fa-map-marker-alt opacity-10"></i>
             </div>
             <div class="ms-2">
-              <p class="text-sm mb-0">Lokasi: Desa Banyu Hirang, Amuntai Selatan, Kalimantan Selatan</p>
+              <p class="text-sm mb-0">Lokasi: JL. Jendral Sudirman No. 10 Marabahan, Barito Kuala</p>
             </div>
           </div>
           <div class="d-flex align-items-center mb-2">
             <div class="icon icon-shape icon-xs bg-gradient-success shadow text-center">
-              <i class="fas fa-hands opacity-10"></i>
+              <i class="fas fa-phone opacity-10"></i>
             </div>
             <div class="ms-2">
-              <p class="text-sm mb-0">Pengrajin: 25+ Master Pengrajin Berpengalaman</p>
+              <p class="text-sm mb-0">Telepon: (0511) 4799118</p>
             </div>
           </div>
           <div class="d-flex align-items-center mb-2">
             <div class="icon icon-shape icon-xs bg-gradient-success shadow text-center">
-              <i class="fas fa-award opacity-10"></i>
+              <i class="fas fa-globe opacity-10"></i>
             </div>
             <div class="ms-2">
-              <p class="text-sm mb-0">Penghargaan: Produk Unggulan Daerah Kalimantan Selatan</p>
+              <p class="text-sm mb-0">Website: <a href="#" target="_blank">rsud-abdulaziz.baritokualakab.go.id</a></p>
             </div>
           </div>
         </div>

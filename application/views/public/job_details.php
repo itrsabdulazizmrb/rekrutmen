@@ -23,7 +23,7 @@
                   <i class="fas fa-building opacity-10"></i>
                 </div>
                 <div class="ms-2">
-                  <p class="text-sm mb-0">Perusahaan: <span class="font-weight-bold"><?= $job->company_name ?? 'SIREK Company' ?></span></p>
+                  <p class="text-sm mb-0">Perusahaan: <span class="font-weight-bold"><?= $job->company_name ?? 'RSUD H. Abdul Aziz Marabahan' ?></span></p>
                 </div>
               </div>
               <div class="d-flex align-items-center mb-2">
@@ -113,7 +113,7 @@
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?= current_url() ?>" target="_blank" class="btn btn-facebook btn-icon-only me-2">
               <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
             </a>
-            <a href="https://twitter.com/intent/tweet?url=<?= current_url() ?>&text=<?= $job->title ?> - SIREK" target="_blank" class="btn btn-twitter btn-icon-only me-2">
+            <a href="https://twitter.com/intent/tweet?url=<?= current_url() ?>&text=<?= $job->title ?> - RSUD H. Abdul Aziz Marabahan" target="_blank" class="btn btn-twitter btn-icon-only me-2">
               <span class="btn-inner--icon"><i class="fab fa-twitter"></i></span>
             </a>
             <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?= current_url() ?>" target="_blank" class="btn btn-linkedin btn-icon-only me-2">
@@ -122,7 +122,7 @@
             <a href="https://wa.me/?text=<?= $job->title ?> - <?= current_url() ?>" target="_blank" class="btn btn-whatsapp btn-icon-only me-2">
               <span class="btn-inner--icon"><i class="fab fa-whatsapp"></i></span>
             </a>
-            <a href="mailto:?subject=<?= $job->title ?> - SIREK&body=Lihat lowongan pekerjaan ini: <?= current_url() ?>" class="btn btn-google-plus btn-icon-only">
+            <a href="mailto:?subject=<?= $job->title ?> - RSUD H. Abdul Aziz Marabahan&body=Lihat lowongan pekerjaan ini: <?= current_url() ?>" class="btn btn-google-plus btn-icon-only">
               <span class="btn-inner--icon"><i class="fas fa-envelope"></i></span>
             </a>
           </div>
@@ -152,16 +152,16 @@
         <div class="card-body p-4">
           <h5 class="mb-3">Tentang Perusahaan</h5>
           <div class="text-center mb-3">
-            <img src="<?= base_url('assets/img/company-logo.jpg') ?>" alt="Company Logo" class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="<?= base_url('assets/img/gallery-logo.png') ?>" alt="Company Logo" class="img-fluid rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
           </div>
-          <h6 class="text-center mb-3"><?= $job->company_name ?? 'SIREK Company' ?></h6>
-          <p class="text-sm">SIREK adalah perusahaan teknologi terkemuka yang berfokus pada pengembangan solusi rekrutmen inovatif untuk berbagai industri.</p>
+          <h6 class="text-center mb-3"><?= $job->company_name ?? 'RSUD H. Abdul Aziz Marabahan' ?></h6>
+          <p class="text-sm">RSUD H. Abdul Aziz Marabahan adalah rumah sakit umum daerah yang berkomitmen untuk memberikan pelayanan kesehatan berkualitas dan menjadi pusat rujukan di wilayahnya.</p>
           <div class="d-flex align-items-center mb-2">
             <div class="icon icon-shape icon-xs bg-gradient-primary shadow text-center">
               <i class="fas fa-globe opacity-10"></i>
             </div>
             <div class="ms-2">
-              <p class="text-sm mb-0">Website: <a href="https://www.sirek.com" target="_blank">www.sirek.com</a></p>
+              <p class="text-sm mb-0">Website: <a href="#" target="_blank">www.rsud-marabahan.go.id</a></p>
             </div>
           </div>
           <div class="d-flex align-items-center mb-2">
@@ -169,7 +169,7 @@
               <i class="fas fa-map-marker-alt opacity-10"></i>
             </div>
             <div class="ms-2">
-              <p class="text-sm mb-0">Lokasi: Jakarta, Indonesia</p>
+              <p class="text-sm mb-0">Lokasi: Marabahan, Kalimantan Selatan</p>
             </div>
           </div>
           <div class="d-flex align-items-center mb-2">
@@ -177,7 +177,7 @@
               <i class="fas fa-users opacity-10"></i>
             </div>
             <div class="ms-2">
-              <p class="text-sm mb-0">Jumlah Karyawan: 100-500</p>
+              <p class="text-sm mb-0">Jumlah Staf: 500+</p>
             </div>
           </div>
         </div>

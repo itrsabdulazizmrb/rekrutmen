@@ -36,9 +36,9 @@
                   <h4 class="font-weight-bolder"><?= $title ?></h4>
                   <p class="mb-0">
                     <?php if ($title == 'Login') : ?>
-                      Masuk ke akun SIREK RSHAA anda
+                      Masuk ke akun Rekrutmen RSUD H. Abdul Aziz Marabahan anda
                     <?php elseif ($title == 'Daftar') : ?>
-                      Daftar akun SIREK RSHAA
+                      Daftar akun Rekrutmen RSUD H. Abdul Aziz Marabahan
                     <?php elseif ($title == 'Lupa Password') : ?>
                       Masukkan email Anda untuk reset password
                     <?php elseif ($title == 'Reset Password') : ?>

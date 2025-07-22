@@ -76,10 +76,10 @@
 <body>
     <div class="header">
         <img src="<?= base_url('assets/img/gallery-logo.png') ?>" alt="Logo GKI" class="logo">
-        <div class="company-name">Gallery Kembang Ilung</div>
+        <div class="company-name">RSUD H. Abdul Aziz Marabahan</div>
         <div class="company-address">
-        Desa Banyu Hirang, Kecamatan Amuntai Selatan, Kabupaten Hulu Sungai Tengah, Kalimantan Selatan
-        <br>Telp: +62 21 1234 5678
+        Jl. Jenderal Sudirman No. 1, Marabahan, Kalimantan Selatan
+        <br>Telp: (0511) 123-456
         </div>
     </div>
 

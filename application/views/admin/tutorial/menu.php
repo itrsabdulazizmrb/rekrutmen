@@ -78,7 +78,7 @@ public function nama_menu() {
             <hr class="horizontal dark">
             
             <h5 class="text-gradient text-warning">🎨 Icon Guidelines</h5>
-            <p>SIREK menggunakan Nucleo Icons. Berikut panduan pemilihan icon:</p>
+            <p>Sistem rekrutmen RSUD H. Abdul Aziz Marabahan menggunakan Nucleo Icons. Berikut panduan pemilihan icon:</p>
             
             <div class="row">
               <div class="col-md-6">
@@ -179,7 +179,7 @@ $route['admin/menu/(:num)'] = 'admin/nama_menu/detail/$1';
             <hr class="horizontal dark">
             
             <h5 class="text-gradient text-warning">📱 Responsive Menu</h5>
-            <p>Menu SIREK sudah responsive. Berikut struktur yang digunakan:</p>
+            <p>Menu sistem rekrutmen RSUD H. Abdul Aziz Marabahan sudah responsive. Berikut struktur yang digunakan:</p>
             
             <div class="code-block">
 &lt;aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs"&gt;

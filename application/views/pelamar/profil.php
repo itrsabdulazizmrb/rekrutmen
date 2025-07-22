@@ -76,7 +76,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label for="education" class="form-control-label">Pendidikan</label>
-                <textarea name="education" id="education" class="form-control" rows="3" required><?= set_value('education', $profile->pendidikan) ?></textarea>
+                <textarea name="education" id="education" class="form-control" rows="3" placeholder="S1 Teknik Informatika Universitas Kalimantan Selatan" required><?= set_value('education', $profile->pendidikan) ?></textarea>
                 <small class="text-muted">Masukkan latar belakang pendidikan Anda, termasuk gelar, institusi, dan tahun kelulusan.</small>
                 <?= form_error('education', '<small class="text-danger">', '</small>') ?>
               </div>
@@ -97,7 +97,7 @@
               <div class="form-group">
                 <label for="skills" class="form-control-label">Keahlian</label>
                 <textarea name="skills" id="skills" class="form-control" rows="3" required><?= set_value('skills', $profile->keahlian) ?></textarea>
-                <small class="text-muted">Masukkan keahlian Anda, dipisahkan dengan koma (contoh: Manajemen Proyek, Java, SQL, Kepemimpinan).</small>
+                <small class="text-muted">Masukkan keahlian Anda, dipisahkan dengan koma (contoh: Anastesi, Bidan, Java, Php).</small>
                 <?= form_error('skills', '<small class="text-danger">', '</small>') ?>
               </div>
             </div>

@@ -93,7 +93,7 @@
                         <?php endif; ?>
                       </div>
                       <h5 class="card-title"><?= $job->title ?></h5>
-                      <p class="card-text text-sm mb-1"><i class="fas fa-building me-1"></i> <?= $job->company_name ?? 'SIREK Company' ?></p>
+                      <p class="card-text text-sm mb-1"><i class="fas fa-building me-1"></i> <?= $job->company_name ?? 'RSUD H. Abdul Aziz Marabahan' ?></p>
                       <p class="card-text text-sm mb-1"><i class="fas fa-map-marker-alt me-1"></i> <?= $job->location ?></p>
                       <p class="card-text text-sm mb-1"><i class="fas fa-tag me-1"></i> <?= $job->category_name ?></p>
                       <?php if ($job->salary_range) : ?>
@@ -136,7 +136,7 @@
           <div class="row">
             <div class="col-md-6">
               <h5>Mengapa Bergabung dengan Kami?</h5>
-              <p class="text-sm">SIREK menawarkan lingkungan kerja yang dinamis dan mendukung pengembangan karir Anda. Kami menghargai inovasi, kolaborasi, dan pertumbuhan profesional.</p>
+              <p class="text-sm">Bergabunglah dengan RSUD H. Abdul Aziz Marabahan dan jadilah bagian dari tim yang berdedikasi untuk memberikan pelayanan kesehatan terbaik kepada masyarakat. Kami menawarkan lingkungan kerja yang profesional, mendukung, dan berorientasi pada pengembangan karir di bidang medis dan non-medis.</p>
               <ul class="text-sm">
                 <li>Paket kompensasi yang kompetitif</li>
                 <li>Kesempatan pengembangan karir</li>

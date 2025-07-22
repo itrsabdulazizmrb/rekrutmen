@@ -2,8 +2,8 @@
   <div class="col-12">
     <div class="card mb-4">
       <div class="card-header pb-0">
-        <h6>Tutorial & Dokumentasi SIREK</h6>
-        <p class="text-sm mb-0">Panduan lengkap untuk pengembangan dan pengelolaan sistem rekrutmen SIREK</p>
+        <h6>Tutorial & Dokumentasi Sistem Rekrutmen</h6>
+        <p class="text-sm mb-0">Panduan lengkap untuk pengembangan dan pengelolaan sistem rekrutmen RSUD H. Abdul Aziz Marabahan</p>
       </div>
       <div class="card-body px-0 pt-0 pb-2">
         <div class="row p-4">
@@ -53,20 +53,20 @@
                   <i class="ni ni-collection text-white opacity-10"></i>
                 </div>
                 <h5 class="font-weight-bolder">Knowledge Base</h5>
-                <p class="mb-4">Standar coding, konvensi penamaan, best practices, dan troubleshooting guide untuk proyek SIREK.</p>
+                <p class="mb-4">Standar coding, konvensi penamaan, best practices, dan troubleshooting guide untuk proyek sistem rekrutmen.</p>
                 <a href="<?= base_url('admin/tutorial?section=knowledge') ?>" class="btn btn-outline-info btn-sm mt-auto">Lihat Knowledge Base</a>
               </div>
             </div>
           </div>
 
-          <!-- <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-6 col-md-6 mb-4">
             <div class="card h-100">
               <div class="card-body d-flex flex-column">
                 <div class="icon icon-shape icon-lg bg-gradient-dark shadow text-center border-radius-lg mb-3">
                   <i class="ni ni-laptop text-white opacity-10"></i>
                 </div>
                 <h5 class="font-weight-bolder">Code Playground</h5>
-                <p class="mb-4">Interactive code editor untuk testing dan eksperimen dengan code snippets SIREK.</p>
+                <p class="mb-4">Interactive code editor untuk testing dan eksperimen dengan code snippets sistem rekrutmen.</p>
                 <a href="<?= base_url('admin/tutorial?section=playground') ?>" class="btn btn-outline-dark btn-sm mt-auto">Buka Playground</a>
               </div>
             </div>
@@ -92,7 +92,7 @@
                   <i class="ni ni-world-2 text-white opacity-10"></i>
                 </div>
                 <h5 class="font-weight-bolder">API Documentation</h5>
-                <p class="mb-4">REST API endpoints, authentication, dan cara penggunaan API SIREK.</p>
+                <p class="mb-4">REST API endpoints, authentication, dan cara penggunaan API sistem rekrutmen.</p>
                 <a href="<?= base_url('admin/tutorial?section=api') ?>" class="btn btn-outline-warning btn-sm mt-auto">Lihat API Docs</a>
               </div>
             </div>
@@ -122,7 +122,7 @@
                 <a href="<?= base_url('admin/tutorial?section=flowchart') ?>" class="btn btn-outline-info btn-sm mt-auto">Lihat Flowcharts</a>
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>

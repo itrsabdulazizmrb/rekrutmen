@@ -8,7 +8,7 @@
           </div>
           <div>
             <h6 class="mb-0">Code Playground</h6>
-            <p class="text-sm mb-0">Test dan eksperimen dengan code SIREK</p>
+            <p class="text-sm mb-0">Test dan eksperimen dengan kode sistem rekrutmen RSUD H. Abdul Aziz Marabahan</p>
           </div>
         </div>
       </div>

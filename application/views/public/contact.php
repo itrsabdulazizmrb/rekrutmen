@@ -62,7 +62,7 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="privacy_policy" name="privacy_policy" required>
                     <label class="form-check-label" for="privacy_policy">
-                      Saya menyetujui <a href="#">Kebijakan Privasi</a> dan mengizinkan SIREK untuk menghubungi saya.
+                      Saya menyetujui <a href="#">Kebijakan Privasi</a> dan mengizinkan RSUD H. Abdul Aziz Marabahan untuk menghubungi saya.
                     </label>
                   </div>
                 </div>
@@ -81,21 +81,21 @@
               </div>
               <div class="description ps-3">
                 <h5 class="text-white">Alamat</h5>
-                <p class="text-white opacity-8">Gedung SIREK, Jl. HR. Rasuna Said Kav. 10-11<br>Jakarta Selatan, 12950<br>Indonesia</p>
+                <p class="text-white opacity-8">Jl. Jenderal Sudirman No. 10, Marabahan<br>Kalimantan Selatan, 70513<br>Indonesia</p>
               </div>
               <div class="icon mt-4">
                 <i class="fas fa-phone text-white"></i>
               </div>
               <div class="description ps-3">
                 <h5 class="text-white">Telepon</h5>
-                <p class="text-white opacity-8">+62 21 5678 9012<br>+62 812 3456 7890</p>
+                <p class="text-white opacity-8">(0511) 4799118</p>
               </div>
               <div class="icon mt-4">
                 <i class="fas fa-envelope text-white"></i>
               </div>
               <div class="description ps-3">
                 <h5 class="text-white">Email</h5>
-                <p class="text-white opacity-8">info@sirek.com<br>support@sirek.com</p>
+                <p class="text-white opacity-8">bludrsudhabdulazizmarabahan@gmail.com</p>
               </div>
               <div class="icon mt-4">
                 <i class="fas fa-clock text-white"></i>
@@ -147,36 +147,36 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Bagaimana cara mendaftar di SIREK?
+                      Bagaimana cara mendaftar di sistem rekrutmen ini?
                     </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFaq1">
                     <div class="accordion-body">
-                      Untuk mendaftar di SIREK, klik tombol "Daftar" di halaman beranda atau halaman login. Isi formulir pendaftaran dengan informasi yang diperlukan, seperti nama, email, dan password. Setelah mendaftar, Anda dapat melengkapi profil Anda dan mulai melamar pekerjaan.
+                      Untuk mendaftar, klik tombol "Daftar" di halaman beranda atau halaman login. Isi formulir pendaftaran dengan informasi yang diperlukan, seperti nama, email, dan password. Setelah mendaftar, Anda dapat melengkapi profil Anda dan mulai melamar pekerjaan.
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Apakah mendaftar di SIREK gratis?
+                      Apakah ada biaya untuk melamar?
                     </button>
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFaq1">
                     <div class="accordion-body">
-                      Ya, pendaftaran dan penggunaan dasar SIREK untuk pelamar kerja sepenuhnya gratis. Anda dapat membuat profil, mencari lowongan, dan melamar pekerjaan tanpa biaya. Untuk perusahaan, kami menawarkan paket berbayar dengan fitur tambahan.
+                      Tidak, seluruh proses rekrutmen di RSUD H. Abdul Aziz Marabahan tidak dipungut biaya apapun. Hati-hati terhadap penipuan yang mengatasnamakan kami.
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Bagaimana cara melamar pekerjaan di SIREK?
+                      Bagaimana cara melamar pekerjaan?
                     </button>
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFaq1">
                     <div class="accordion-body">
-                      Setelah login, Anda dapat mencari lowongan pekerjaan yang sesuai dengan keahlian dan minat Anda. Klik pada lowongan yang ingin Anda lamar, lalu klik tombol "Lamar Sekarang". Isi formulir lamaran, unggah CV Anda, dan kirimkan lamaran Anda. Anda dapat melacak status lamaran Anda di dashboard pelamar.
+                      Setelah login, Anda dapat mencari lowongan pekerjaan yang tersedia. Klik pada lowongan yang Anda minati, lalu klik tombol "Lamar Sekarang". Pastikan Anda telah melengkapi profil dan dokumen yang diperlukan sebelum mengirimkan lamaran.
                     </div>
                   </div>
                 </div>
@@ -187,36 +187,36 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Bagaimana cara mengubah atau memperbarui profil saya?
+                      Dokumen apa saja yang perlu disiapkan?
                     </button>
                   </h2>
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFaq2">
                     <div class="accordion-body">
-                      Setelah login, klik pada nama Anda di pojok kanan atas dan pilih "Profil Saya". Di halaman profil, Anda dapat mengedit informasi pribadi, pengalaman kerja, pendidikan, keterampilan, dan mengunggah CV terbaru Anda. Jangan lupa untuk menyimpan perubahan setelah selesai mengedit.
+                      Persyaratan dokumen dapat bervariasi tergantung pada posisi yang dilamar. Namun, secara umum Anda perlu menyiapkan CV, KTP, ijazah, transkrip nilai, dan dokumen pendukung lainnya seperti STR atau sertifikat keahlian.
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      Bagaimana cara mengikuti penilaian di SIREK?
+                      Bagaimana saya bisa mengetahui status lamaran saya?
                     </button>
                   </h2>
                   <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFaq2">
                     <div class="accordion-body">
-                      Setelah melamar pekerjaan, perusahaan mungkin akan mengirimkan penilaian kepada Anda. Anda akan menerima notifikasi melalui email dan di dashboard pelamar. Klik pada penilaian yang ingin Anda ikuti, baca instruksi dengan seksama, dan selesaikan penilaian dalam batas waktu yang ditentukan.
+                      Anda dapat melacak status lamaran Anda melalui dasbor pelamar setelah Anda login. Kami juga akan mengirimkan notifikasi melalui email mengenai perkembangan proses seleksi.
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingSix">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                      Bagaimana cara menghubungi tim dukungan SIREK?
+                      Siapa yang harus dihubungi jika ada pertanyaan?
                     </button>
                   </h2>
                   <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFaq2">
                     <div class="accordion-body">
-                      Anda dapat menghubungi tim dukungan kami melalui formulir kontak di halaman ini, mengirim email ke support@sirek.com, atau menghubungi kami melalui telepon di +62 21 5678 9012. Tim kami siap membantu Anda dengan pertanyaan atau masalah yang Anda hadapi.
+                      Jika Anda memiliki pertanyaan lebih lanjut, silakan gunakan formulir kontak di halaman ini atau hubungi bagian kepegawaian kami melalui email di rekrutmen@rsud-marabahan.go.id.
                     </div>
                   </div>
                 </div>

@@ -28,7 +28,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="<?= base_url('beranda/index') ?>">
         <img src="<?= base_url('assets/img/gallery-logo.png') ?>" class="navbar-brand-img h-100" alt="gallery_logo">
-        <span class="ms-1 font-weight-bold text-dark">SIREK RSHAA</span>
+        <span class="ms-1 font-weight-bold text-dark">RSUD H. Abdul Aziz M.</span>
       </a>
     </div>
     <hr class="horizontal dark mt-0">

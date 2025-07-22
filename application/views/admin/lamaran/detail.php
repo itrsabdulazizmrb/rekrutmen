@@ -396,9 +396,9 @@
       </div>
       <div class="card-body">
         <p class="text-sm mb-1"><strong>Judul:</strong> <?= $job->judul ?? 'Tidak tersedia' ?></p>
-        <p class="text-sm mb-1"><strong>Tipe:</strong> <?= isset($job->jenis_pekerjaan) ? ($job->jenis_pekerjaan == 'full-time' ? 'Full Time' : ($job->jenis_pekerjaan == 'part-time' ? 'Part Time' : ($job->jenis_pekerjaan == 'contract' ? 'Kontrak' : 'Magang'))) : 'Tidak tersedia' ?></p>
+        <!-- <p class="text-sm mb-1"><strong>Tipe:</strong> <?= isset($job->jenis_pekerjaan) ? ($job->jenis_pekerjaan == 'full-time' ? 'Full Time' : ($job->jenis_pekerjaan == 'part-time' ? 'Part Time' : ($job->jenis_pekerjaan == 'contract' ? 'Kontrak' : 'Honor'))) : 'Tidak tersedia' ?></p> -->
         <p class="text-sm mb-1"><strong>Lokasi:</strong> <?= $job->lokasi ?? 'Tidak tersedia' ?></p>
-        <p class="text-sm mb-1"><strong>Kategori:</strong> <?= $job->nama_kategori ?? 'Tidak tersedia' ?></p>
+        <!-- <p class="text-sm mb-1"><strong>Kategori:</strong> <?= $job->nama_kategori ?? 'Tidak tersedia' ?></p> -->
         <?php if (isset($job->kisaran_gaji) && $job->kisaran_gaji) : ?>
           <p class="text-sm mb-1"><strong>Kisaran Gaji:</strong> <?= $job->kisaran_gaji ?></p>
         <?php endif; ?>

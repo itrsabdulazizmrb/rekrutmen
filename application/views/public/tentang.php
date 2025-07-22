@@ -4,9 +4,9 @@
     <div class="row">
       <div class="col-md-10 mx-auto">
         <div class="text-center">
-          <h1 class="text-white display-4 font-weight-bold mb-4">Gallery Kembang Ilung</h1>
-          <p class="lead text-white fs-5 mb-4">Melestarikan dan Mengembangkan Seni Kerajinan Tradisional Indonesia</p>
-          <p class="text-white opacity-9 mb-5">Keindahan Anyaman Eceng Gondok dari Hati Kalimantan Selatan</p>
+          <h1 class="text-white display-4 font-weight-bold mb-4">Rekrutmen RSUD H. Abdul Aziz Marabahan</h1>
+          <p class="lead text-white fs-5 mb-4">Membangun Karir di Bidang Pelayanan Kesehatan</p>
+          <p class="text-white opacity-9 mb-5">Bergabunglah dengan tim profesional kami untuk memberikan pelayanan terbaik bagi masyarakat.</p>
           <div class="row justify-content-center">
             <div class="col-md-8">
               <!-- <div class="card card-body bg-white bg-opacity-10 backdrop-blur border-0 shadow-lg py-3">
@@ -39,17 +39,17 @@
       <div class="card card-body blur shadow-blur mx-3 mx-md-4">
         <div class="row">
           <div class="col-md-6">
-            <h3>Siapa Kami</h3>
-            <p class="lead">Gallery Kembang Ilung adalah destinasi seni kerajinan tangan yang memadukan tradisi, inovasi, dan keindahan alam Kalimantan Selatan.</p>
-            <p>Berlokasi di Desa Banyu Hirang, Kecamatan Amuntai Selatan, Kabupaten Hulu Sungai Tengah, Kalimantan Selatan, galeri kami telah menjadi pusat keunggulan kerajinan anyaman eceng gondok dan mebel berkualitas tinggi. Kami tidak hanya menyajikan karya seni kerajinan tangan yang memukau, tetapi juga menawarkan pengalaman wisata yang tak terlupakan melalui objek wisata Rumah Terapung yang menyatu dengan keindahan alam.</p>
-            <p>Nama "Kembang Ilung" yang berarti "bunga hati" mencerminkan dedikasi kami untuk menghadirkan karya seni yang lahir dari hati dan jiwa para pengrajin lokal, melestarikan warisan budaya sambil mengembangkan inovasi berkelanjutan.</p>
+            <h3>Tentang Kami</h3>
+            <p class="lead">Sistem Rekrutmen RSUD H. Abdul Aziz Marabahan adalah platform resmi untuk menjaring tenaga profesional di bidang kesehatan dan non-kesehatan.</p>
+            <p>Kami berkomitmen untuk menyelenggarakan proses rekrutmen yang transparan, adil, dan akuntabel demi mendapatkan sumber daya manusia yang kompeten, berintegritas, dan siap melayani masyarakat dengan sepenuh hati.</p>
+            <p>Melalui portal ini, kami membuka kesempatan bagi putra-putri terbaik bangsa untuk berkarir dan berkembang bersama RSUD H. Abdul Aziz Marabahan.</p>
             <div class="mt-4">
-              <h6><i class="fas fa-map-marker-alt text-primary me-2"></i>Lokasi:</h6>
-              <p class="text-muted">Desa Banyu Hirang, Kecamatan Amuntai Selatan, Kabupaten Hulu Sungai Tengah, Kalimantan Selatan</p>
+              <h6><i class="fas fa-hospital text-primary me-2"></i>Alamat:</h6>
+              <p class="text-muted">Jl. Jenderal Sudirman No. 1, Marabahan, Kalimantan Selatan</p>
             </div>
           </div>
           <div class="col-md-6">
-            <img src="<?= base_url('assets/img/gallery-main.jpg') ?>" class="img-fluid rounded shadow" alt="Gallery Kembang Ilung">
+            <img src="<?= base_url('assets/img/hospital-building.jpg') ?>" class="img-fluid rounded shadow" alt="RSUD H. Abdul Aziz Marabahan">
           </div>
       </div>
     </div>
@@ -252,11 +252,11 @@
         <div class="card-body p-4">
           <div class="row">
             <div class="col-md-8">
-              <h3 class="text-white">Kunjungi Gallery Kembang Ilung</h3>
-              <p class="text-white opacity-8">Rasakan pengalaman unik melihat proses pembuatan kerajinan anyaman eceng gondok dan nikmati keindahan Rumah Terapung. Hubungi kami untuk informasi kunjungan dan workshop.</p>
+              <h3 class="text-white">Lihat Lowongan Tersedia</h3>
+              <p class="text-white opacity-8">Temukan posisi yang sesuai dengan keahlian dan minat Anda. Mari berkontribusi bersama kami dalam meningkatkan kualitas pelayanan kesehatan.</p>
             </div>
             <div class="col-md-4 d-flex justify-content-end align-items-center">
-              <a href="<?= base_url('kontak') ?>" class="btn btn-lg bg-gradient-primary mb-0">Hubungi Kami</a>
+              <a href="<?= base_url('lowongan') ?>" class="btn btn-lg bg-gradient-primary mb-0">Lihat Lowongan</a>
             </div>
           </div>
         </div>

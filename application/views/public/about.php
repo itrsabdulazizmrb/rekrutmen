@@ -4,8 +4,8 @@
     <div class="row">
       <div class="col-md-8 mx-auto">
         <div class="text-center">
-          <h1 class="text-white">Tentang SIREK</h1>
-          <p class="lead text-white">Menghubungkan talenta terbaik dengan peluang karir yang tepat</p>
+          <h1 class="text-white">Tentang RSUD H. Abdul Aziz Marabahan</h1>
+          <p class="lead text-white">Membangun karir dalam pelayanan kesehatan.</p>
         </div>
       </div>
     </div>
@@ -18,12 +18,12 @@
       <div class="card card-body blur shadow-blur mx-3 mx-md-4">
         <div class="row">
           <div class="col-md-6">
-            <h3>Siapa Kami</h3>
-            <p>SIREK adalah sistem rekrutmen online terkemuka yang didedikasikan untuk menghubungkan talenta terbaik dengan perusahaan-perusahaan terkemuka di Indonesia. Kami memahami bahwa proses rekrutmen yang efektif adalah kunci untuk membangun tim yang sukses.</p>
-            <p>Didirikan pada tahun 2020, SIREK telah membantu ribuan pelamar menemukan pekerjaan impian mereka dan membantu ratusan perusahaan menemukan kandidat yang tepat untuk posisi yang mereka butuhkan.</p>
+            <h3>Selamat Datang di Sistem Rekrutmen RSUD H. Abdul Aziz Marabahan</h3>
+            <p>Kami adalah rumah sakit umum daerah yang berdedikasi untuk memberikan pelayanan kesehatan terbaik bagi masyarakat. Kami percaya bahwa sumber daya manusia yang berkualitas adalah kunci utama dalam mencapai tujuan kami.</p>
+            <p>Melalui sistem rekrutmen ini, kami mengundang para profesional berbakat dan bersemangat untuk bergabung bersama kami dalam memberikan dampak positif bagi kesehatan masyarakat.</p>
           </div>
           <div class="col-md-6">
-            <img src="<?= base_url('assets/img/about-team.jpg') ?>" class="img-fluid rounded" alt="SIREK Team">
+            <img src="<?= base_url('assets/img/hospital-building.jpg') ?>" class="img-fluid rounded" alt="Gedung RSUD H. Abdul Aziz Marabahan">
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
                     <i class="fas fa-eye text-primary"></i>
                   </div>
                   <h5 class="text-white">Visi</h5>
-                  <p class="text-white">Menjadi platform rekrutmen terdepan yang menghubungkan talenta terbaik dengan peluang karir yang tepat, mendorong pertumbuhan profesional dan kesuksesan organisasi.</p>
+                  <p class="text-white">Menjadi rumah sakit rujukan yang unggul dalam pelayanan, pendidikan, dan penelitian di tingkat regional.</p>
                 </div>
               </div>
             </div>
@@ -59,10 +59,10 @@
                   </div>
                   <h5 class="text-white">Misi</h5>
                   <ul class="text-white ps-4">
-                    <li>Menyediakan platform rekrutmen yang efisien, transparan, dan mudah digunakan</li>
-                    <li>Memfasilitasi proses rekrutmen yang adil dan inklusif</li>
-                    <li>Mendukung pelamar dalam mengembangkan karir mereka</li>
-                    <li>Membantu perusahaan menemukan kandidat yang sesuai dengan kebutuhan mereka</li>
+                    <li>Memberikan pelayanan kesehatan yang profesional, ramah, dan berorientasi pada keselamatan pasien.</li>
+                    <li>Mengembangkan sumber daya manusia yang kompeten dan berintegritas.</li>
+                    <li>Menyelenggarakan pendidikan dan penelitian di bidang kesehatan.</li>
+                    <li>Menciptakan lingkungan kerja yang aman, nyaman, dan produktif.</li>
                   </ul>
                 </div>
               </div>
@@ -89,8 +89,8 @@
                   <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
                     <i class="fas fa-handshake opacity-10"></i>
                   </div>
-                  <h5 class="mt-3 mb-1">Integritas</h5>
-                  <p>Kami berkomitmen untuk menjunjung tinggi kejujuran, transparansi, dan etika dalam setiap aspek layanan kami.</p>
+                  <h5 class="mt-3 mb-1">Profesionalisme</h5>
+                  <p>Kami bekerja dengan standar etika dan kompetensi tertinggi dalam setiap aspek pelayanan.</p>
                 </div>
               </div>
             </div>
@@ -100,8 +100,8 @@
                   <div class="icon icon-shape icon-lg bg-gradient-success shadow text-center border-radius-lg">
                     <i class="fas fa-users opacity-10"></i>
                   </div>
-                  <h5 class="mt-3 mb-1">Kolaborasi</h5>
-                  <p>Kami percaya bahwa kerja sama yang baik antara pelamar, perusahaan, dan platform kami adalah kunci kesuksesan bersama.</p>
+                  <h5 class="mt-3 mb-1">Kerja Tim</h5>
+                  <p>Kami percaya bahwa kolaborasi yang solid antar staf adalah kunci untuk mencapai hasil terbaik bagi pasien.</p>
                 </div>
               </div>
             </div>
@@ -109,10 +109,10 @@
               <div class="card card-plain text-center">
                 <div class="card-body">
                   <div class="icon icon-shape icon-lg bg-gradient-warning shadow text-center border-radius-lg">
-                    <i class="fas fa-lightbulb opacity-10"></i>
+                    <i class="fas fa-heartbeat opacity-10"></i>
                   </div>
-                  <h5 class="mt-3 mb-1">Inovasi</h5>
-                  <p>Kami terus berinovasi untuk meningkatkan pengalaman rekrutmen dan mengadaptasi teknologi terbaru.</p>
+                  <h5 class="mt-3 mb-1">Kepedulian</h5>
+                  <p>Kami melayani dengan empati dan kepedulian, menempatkan kebutuhan pasien sebagai prioritas utama.</p>
                 </div>
               </div>
             </div>
@@ -128,23 +128,23 @@
         <div class="card-body p-4">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h3 class="mb-4">Tim Kami</h3>
-              <p class="mb-5">Kami adalah tim profesional yang berdedikasi untuk memberikan layanan rekrutmen terbaik</p>
+              <h3 class="mb-4">Pimpinan Kami</h3>
+              <p class="mb-5">Dipimpin oleh para profesional berpengalaman yang berdedikasi untuk kemajuan rumah sakit</p>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card card-profile">
-                <img src="<?= base_url('assets/img/bg-profile.jpg') ?>" alt="Profile Cover" class="card-img-top">
+                <img src="<?= base_url('assets/img/hospital-bg.png') ?>" alt="Profile Cover" class="card-img-top">
                 <div class="position-relative">
                   <div class="position-absolute top-0 start-50 translate-middle">
                     <img src="<?= base_url('assets/img/team-1.jpg') ?>" class="rounded-circle img-fluid border border-2 border-white" style="width: 80px; height: 80px; object-fit: cover;">
                   </div>
                 </div>
                 <div class="card-body text-center pt-5 mt-4">
-                  <h5 class="mb-0">Budi Santoso</h5>
-                  <p class="text-secondary text-sm">CEO & Founder</p>
-                  <p class="text-sm mb-3">Berpengalaman lebih dari 15 tahun di bidang HR dan teknologi.</p>
+                  <h5 class="mb-0">Dr. H. Budi Santoso, MARS</h5>
+                  <p class="text-secondary text-sm">Direktur Utama</p>
+                  <p class="text-sm mb-3">Memimpin dengan visi untuk menjadikan RSUD sebagai pusat kesehatan terdepan.</p>
                   <div class="d-flex justify-content-center">
                     <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-facebook me-2"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-twitter me-2"><i class="fab fa-twitter"></i></a>
@@ -153,18 +153,18 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card card-profile">
-                <img src="<?= base_url('assets/img/bg-profile.jpg') ?>" alt="Profile Cover" class="card-img-top">
+                <img src="<?= base_url('assets/img/hospital-bg.png') ?>" alt="Profile Cover" class="card-img-top">
                 <div class="position-relative">
                   <div class="position-absolute top-0 start-50 translate-middle">
                     <img src="<?= base_url('assets/img/team-2.jpg') ?>" class="rounded-circle img-fluid border border-2 border-white" style="width: 80px; height: 80px; object-fit: cover;">
                   </div>
                 </div>
                 <div class="card-body text-center pt-5 mt-4">
-                  <h5 class="mb-0">Siti Rahayu</h5>
-                  <p class="text-secondary text-sm">CTO</p>
-                  <p class="text-sm mb-3">Ahli teknologi dengan fokus pada pengembangan platform rekrutmen.</p>
+                  <h5 class="mb-0">Dr. Siti Rahayu, Sp.A</h5>
+                  <p class="text-secondary text-sm">Direktur Pelayanan Medik</p>
+                  <p class="text-sm mb-3">Berkomitmen pada kualitas dan keselamatan pasien dalam setiap layanan medis.</p>
                   <div class="d-flex justify-content-center">
                     <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-facebook me-2"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-twitter me-2"><i class="fab fa-twitter"></i></a>
@@ -173,38 +173,18 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card card-profile">
-                <img src="<?= base_url('assets/img/bg-profile.jpg') ?>" alt="Profile Cover" class="card-img-top">
+                <img src="<?= base_url('assets/img/hospital-bg.png') ?>" alt="Profile Cover" class="card-img-top">
                 <div class="position-relative">
                   <div class="position-absolute top-0 start-50 translate-middle">
                     <img src="<?= base_url('assets/img/team-3.jpg') ?>" class="rounded-circle img-fluid border border-2 border-white" style="width: 80px; height: 80px; object-fit: cover;">
                   </div>
                 </div>
                 <div class="card-body text-center pt-5 mt-4">
-                  <h5 class="mb-0">Ahmad Fauzi</h5>
-                  <p class="text-secondary text-sm">HR Director</p>
-                  <p class="text-sm mb-3">Pakar rekrutmen dengan pengalaman di berbagai industri.</p>
-                  <div class="d-flex justify-content-center">
-                    <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-facebook me-2"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-twitter me-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-linkedin"><i class="fab fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card card-profile">
-                <img src="<?= base_url('assets/img/bg-profile.jpg') ?>" alt="Profile Cover" class="card-img-top">
-                <div class="position-relative">
-                  <div class="position-absolute top-0 start-50 translate-middle">
-                    <img src="<?= base_url('assets/img/team-4.jpg') ?>" class="rounded-circle img-fluid border border-2 border-white" style="width: 80px; height: 80px; object-fit: cover;">
-                  </div>
-                </div>
-                <div class="card-body text-center pt-5 mt-4">
-                  <h5 class="mb-0">Dewi Anggraini</h5>
-                  <p class="text-secondary text-sm">Marketing Director</p>
-                  <p class="text-sm mb-3">Ahli strategi pemasaran dengan fokus pada pertumbuhan platform.</p>
+                  <h5 class="mb-0">Ahmad Fauzi, S.E., M.M.</h5>
+                  <p class="text-secondary text-sm">Direktur Umum & Keuangan</p>
+                  <p class="text-sm mb-3">Mengelola operasional dan keuangan rumah sakit secara efisien dan transparan.</p>
                   <div class="d-flex justify-content-center">
                     <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-facebook me-2"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="btn btn-link btn-icon-only btn-rounded btn-twitter me-2"><i class="fab fa-twitter"></i></a>
@@ -225,11 +205,11 @@
         <div class="card-body p-4">
           <div class="row">
             <div class="col-md-8">
-              <h3 class="text-white">Bergabunglah dengan SIREK</h3>
-              <p class="text-white opacity-8">Temukan peluang karir yang sesuai dengan minat dan keahlian Anda. Daftar sekarang dan mulai perjalanan karir Anda bersama kami.</p>
+              <h3 class="text-white">Bergabunglah dengan Tim Kami</h3>
+              <p class="text-white opacity-8">Jadilah bagian dari tim yang berdedikasi untuk memberikan pelayanan kesehatan terbaik. Temukan peluang karir Anda di RSUD H. Abdul Aziz Marabahan.</p>
             </div>
             <div class="col-md-4 d-flex justify-content-end align-items-center">
-              <a href="<?= base_url('auth/register') ?>" class="btn btn-lg bg-gradient-primary mb-0">Daftar Sekarang</a>
+              <a href="<?= base_url('lowongan') ?>" class="btn btn-lg bg-gradient-primary mb-0">Lihat Lowongan</a>
             </div>
           </div>
         </div>

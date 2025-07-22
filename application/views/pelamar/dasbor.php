@@ -198,3 +198,24 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var profileCompletion = <?= $profile_completion ?>;
+    if (profileCompletion < 80) {
+        Swal.fire({
+            title: 'Lengkapi Profil Anda',
+            text: 'Kelengkapan profil Anda baru ' + profileCompletion + '%. Untuk melanjutkan, harap lengkapi profil Anda hingga minimal 80%.',
+            icon: 'warning',
+            confirmButtonText: 'Lengkapi Sekarang',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '<?= base_url('pelamar/profil') ?>';
+            }
+        });
+    }
+});
+</script>

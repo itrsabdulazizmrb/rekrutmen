@@ -1,12 +1,11 @@
-<div class="page-header min-vh-75 d-flex align-items-center" style="background-image: url('<?= base_url('assets/img/gallery-hero-bg.jpg') ?>'); background-size: cover; background-position: center;">
+<div class="page-header min-vh-45 d-flex align-items-center" style="background-image: url('<?= base_url('assets/img/hospital-bg.png') ?>'); background-size: cover; background-position: center;">
   <span class="mask bg-gradient-dark opacity-7"></span>
   <div class="container">
     <div class="row">
       <div class="col-md-10 mx-auto">
         <div class="text-center">
-          <h1 class="text-white display-4 font-weight-bold mb-4">Koleksi Kerajinan</h1>
-          <p class="lead text-white fs-5 mb-4">Jelajahi Karya Seni Anyaman Eceng Gondok Terbaik</p>
-          <p class="text-white opacity-9 mb-5">Temukan Kerajinan Berkualitas Tinggi dari Tangan Terampil Pengrajin Lokal</p>
+          <h1 class="text-white display-4 font-weight-bold mb-4">Rekrutmen RSUD H. Abdul Aziz Marabahan</h1>
+          <p class="text-white opacity-9 mb-5">Kami mencari individu berbakat dan bersemangat untuk mengisi berbagai posisi.</p>
           <div class="row justify-content-center">
             <!-- <div class="col-md-8">
               <div class="card card-body bg-white bg-opacity-10 backdrop-blur border-0 shadow-lg py-3">
@@ -36,7 +35,7 @@
 <div class="container">
   <div class="row mt-n6">
     <div class="col-md-12">
-      <div class="card card-body blur shadow-blur mx-3 mx-md-4">
+      <!-- <div class="card card-body blur shadow-blur mx-3 mx-md-4">
         <form id="job-filter-form" action="<?= base_url('lowongan') ?>" method="get">
           <div class="row">
             <div class="col-md-3">
@@ -47,9 +46,7 @@
                        value="<?= $this->input->get('q') ?>"
                        autocomplete="off">
               </div>
-              <!-- Search suggestions dropdown -->
               <div id="search-suggestions" class="dropdown-menu w-100" style="display: none; max-height: 200px; overflow-y: auto;">
-                <!-- Suggestions will be populated by JavaScript -->
               </div>
             </div>
             <div class="col-md-3">
@@ -91,7 +88,7 @@
             </div>
           </div>
         </form>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -177,7 +174,7 @@
                         <?php endif; ?>
                       </div>
                       <h5 class="card-title"><?= $job->judul ?></h5>
-                      <p class="card-text text-sm mb-1"><i class="fas fa-building me-1"></i> <?= $job->company_name ?? 'SIREK Company' ?></p>
+                      <p class="card-text text-sm mb-1"><i class="fas fa-building me-1"></i> <?= $job->company_name ?? 'RSUD H. Abdul Aziz Marabahan' ?></p>
                       <p class="card-text text-sm mb-1"><i class="fas fa-map-marker-alt me-1"></i> <?= $job->lokasi ?></p>
                       <p class="card-text text-sm mb-1"><i class="fas fa-tag me-1"></i> <?= $job->category_name ?></p>
                       <?php if ($job->rentang_gaji) : ?>
@@ -232,14 +229,14 @@
           <div class="row">
             <div class="col-md-6">
               <h5>Mengapa Bergabung dengan Kami?</h5>
-              <p class="text-sm">SIREK menawarkan lingkungan kerja yang dinamis dan mendukung pengembangan karir Anda. Kami menghargai inovasi, kolaborasi, dan pertumbuhan profesional.</p>
-              <ul class="text-sm">
+              <p class="text-sm">Bergabunglah dengan RSUD H. Abdul Aziz Marabahan dan jadilah bagian dari tim yang berdedikasi untuk memberikan pelayanan kesehatan terbaik kepada masyarakat. Kami menawarkan lingkungan kerja yang profesional, mendukung, dan berorientasi pada pengembangan karir di bidang medis dan non-medis.</p>
+              <!-- <ul class="text-sm">
                 <li>Paket kompensasi yang kompetitif</li>
                 <li>Kesempatan pengembangan karir</li>
                 <li>Lingkungan kerja yang inklusif</li>
                 <li>Program kesejahteraan karyawan</li>
                 <li>Keseimbangan kehidupan kerja</li>
-              </ul>
+              </ul> -->
             </div>
             <div class="col-md-6">
               <h5>Proses Rekrutmen</h5>

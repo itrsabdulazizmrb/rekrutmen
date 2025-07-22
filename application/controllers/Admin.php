@@ -436,17 +436,19 @@ class Admin extends CI_Controller {
 
     
     private function kirim_notifikasi_whatsapp($applicant, $job, $status, $catatan = '') {
-        
         $message = dapatkan_pesan_status_lamaran($status, $job->judul, $applicant->nama_lengkap);
-
-        
         if (!empty($catatan)) {
             $message .= "\n\n*Catatan dari HR:*\n" . $catatan;
         }
-
-        
         $whatsapp_result = kirim_whatsapp($applicant->telepon, $message);
-
+        // Logging WA response
+        log_message('error', '[WA LOG] Pengiriman ke: ' . $applicant->telepon . ' | Status: ' . $status . ' | Response: ' . print_r($whatsapp_result, true));
+        // Jika error, tambahkan flashdata error lebih detail
+        if (!$whatsapp_result || (isset($whatsapp_result['success']) && !$whatsapp_result['success'])) {
+            $error_msg = isset($whatsapp_result['error']) ? $whatsapp_result['error'] : 'Tidak ada error detail.';
+            $response_msg = isset($whatsapp_result['response']) ? json_encode($whatsapp_result['response']) : '-';
+            $this->session->set_flashdata('error', 'Gagal mengirim WhatsApp. Error: ' . $error_msg . ' | Response: ' . $response_msg);
+        }
         return $whatsapp_result;
     }
 
@@ -1700,7 +1702,7 @@ class Admin extends CI_Controller {
 
         
         $this->session->set_flashdata('success', 'Opsi soal berhasil disimpan.');
-        redirect('admin/soal_penilaian/' . $question->assessment_id);
+        redirect('admin/tambah_soal/' . $question->assessment_id);
     }
 
     

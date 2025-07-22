@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-12">
             <h5 class="text-gradient text-success mb-3">📝 Tutorial CRUD: Membuat Modul "Kategori Lowongan"</h5>
-            <p class="mb-4">Tutorial ini akan menunjukkan cara membuat modul CRUD lengkap menggunakan contoh "Kategori Lowongan" yang sudah ada di SIREK.</p>
+            <p class="mb-4">Tutorial ini akan menunjukkan cara membuat modul CRUD lengkap menggunakan contoh "Kategori Lowongan" yang sudah ada di sistem.</p>
 
             <div class="alert alert-success">
               <strong>💡 Yang akan dipelajari:</strong>

@@ -7,7 +7,7 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 dibuat dengan <i class="fa fa-heart text-success"></i> oleh
-                <a href="javascript:;" class="font-weight-bold text-success">Radina</a>
+                <a href="javascript:;" class="font-weight-bold text-success">ITR RSHAA</a>
               </div>
             </div>
             <div class="col-lg-6">

@@ -229,3 +229,20 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateCountdown, 1000);
 });
 </script>
+
+<style>
+@media (max-width: 767.98px) {
+  .table-responsive {
+    max-width: 100vw;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  table.table {
+    min-width: 600px;
+  }
+  .card-body.px-0 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+</style>

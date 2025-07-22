@@ -8,7 +8,7 @@
           </div>
           <div>
             <h6 class="mb-0">Testing Guide</h6>
-            <p class="text-sm mb-0">Panduan testing untuk memastikan kualitas code SIREK</p>
+            <p class="text-sm mb-0">Panduan testing untuk memastikan kualitas kode sistem rekrutmen RSUD H. Abdul Aziz Marabahan</p>
           </div>
         </div>
       </div>
@@ -20,7 +20,7 @@
             
             <div class="alert alert-success">
               <strong>🎯 Testing Goals:</strong><br>
-              Memastikan semua fitur SIREK berfungsi dengan baik, aman, dan reliable melalui berbagai jenis testing.
+              Memastikan semua fitur sistem rekrutmen RSUD H. Abdul Aziz Marabahan berfungsi dengan baik, aman, dan reliable melalui berbagai jenis testing.
             </div>
             
             <div class="row">
@@ -191,7 +191,7 @@
                   <pre class="mb-0"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;phpunit bootstrap="tests/bootstrap.php"&gt;
     &lt;testsuites&gt;
-        &lt;testsuite name="SIREK Tests"&gt;
+        &lt;testsuite name="Rekrutmen RSUD H. Abdul Aziz Marabahan Tests"&gt;
             &lt;directory&gt;tests&lt;/directory&gt;
         &lt;/testsuite&gt;
     &lt;/testsuites&gt;

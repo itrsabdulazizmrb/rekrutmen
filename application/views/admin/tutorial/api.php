@@ -17,8 +17,8 @@
         <div class="row">
           <div class="col-12">
             <div class="alert alert-info">
-              <strong>📡 SIREK API Overview</strong><br>
-              SIREK menyediakan REST API untuk integrasi dengan aplikasi eksternal. API menggunakan JSON format dan autentikasi token.
+              <strong>📡 API Overview</strong><br>
+              Sistem rekrutmen RSUD H. Abdul Aziz Marabahan menyediakan REST API untuk integrasi dengan aplikasi eksternal. API menggunakan JSON format dan autentikasi token.
             </div>
             
             <h5 class="text-gradient text-warning mb-3">🔐 Authentication</h5>
@@ -35,7 +35,7 @@
                 <h6 class="text-sm">Request Body:</h6>
                 <div class="bg-gray-100 border-radius-lg p-3 mb-3">
                   <pre class="mb-0"><code>{
-  "email": "admin@sirek.com",
+  "email": "admin@rsud-marabahan.go.id",
   "password": "password123"
 }</code></pre>
                 </div>
@@ -50,7 +50,7 @@
     "user": {
       "id": 1,
       "name": "Administrator",
-      "email": "admin@sirek.com",
+      "email": "admin@rsud-marabahan.go.id",
       "role": "admin"
     }
   }

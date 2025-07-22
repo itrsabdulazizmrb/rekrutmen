@@ -4,9 +4,9 @@
     <div class="row">
       <div class="col-md-10 mx-auto">
         <div class="text-center">
-          <h1 class="text-white display-4 font-weight-bold mb-4">Blog Gallery Kembang Ilung</h1>
-          <p class="lead text-white fs-5 mb-4">Cerita, Tips, dan Inspirasi Dunia Kerajinan Tradisional</p>
-          <p class="text-white opacity-9 mb-5">Jelajahi Artikel Menarik Seputar Seni Anyaman dan Budaya Lokal</p>
+          <h1 class="text-white display-4 font-weight-bold mb-4">Artikel Rekrutmen</h1>
+          <p class="lead text-white fs-5 mb-4">Informasi, Tips, dan Panduan Seputar Karir di Dunia Kesehatan</p>
+          <p class="text-white opacity-9 mb-5">Jelajahi artikel-artikel kami untuk mempersiapkan diri Anda dalam proses rekrutmen.</p>
           <div class="row justify-content-center">
             <div class="col-md-8">
               <!-- <div class="card card-body bg-white bg-opacity-10 backdrop-blur border-0 shadow-lg py-3">

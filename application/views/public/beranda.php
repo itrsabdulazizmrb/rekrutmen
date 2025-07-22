@@ -4,9 +4,9 @@
     <div class="row">
       <div class="col-md-10 mx-auto">
         <div class="text-center">
-          <h1 class="text-white display-4 font-weight-bold mb-4">Gallery Kembang Ilung</h1>
-          <p class="lead text-white fs-5 mb-4">Selamat Datang di Destinasi Seni Kerajinan Tradisional Indonesia</p>
-          <p class="text-white opacity-9 mb-5">Jelajahi Keindahan Anyaman Eceng Gondok dan Nikmati Wisata Rumah Terapung</p>
+          <h1 class="text-white display-4 font-weight-bold mb-4">Rekrutmen RSUD H. Abdul Aziz Marabahan</h1>
+          <p class="lead text-white fs-5 mb-4">Selamat Datang di Portal Karir Resmi RSUD H. Abdul Aziz Marabahan</p>
+          <p class="text-white opacity-9 mb-5">Temukan Peluang Karir Terbaik Anda dan Bergabunglah Bersama Kami</p>
 
           <!-- <div class="row justify-content-center mb-5">
             <div class="col-md-8">
@@ -31,8 +31,8 @@
 
           <div class="row justify-content-center">
             <div class="col-md-6">
-              <a href="<?= base_url('#') ?>" class="btn btn-lg bg-gradient-primary text-white me-3 mb-3">
-                <i class="fas fa-images me-2"></i>Lihat Galeri
+              <a href="<?= base_url('lowongan') ?>" class="btn btn-lg bg-gradient-primary text-white me-3 mb-3">
+                <i class="fas fa-briefcase me-2"></i>Lihat Lowongan
               </a>
               <a href="<?= base_url('tentang') ?>" class="btn btn-lg btn-outline-white mb-3">
                 <i class="fas fa-info-circle me-2"></i>Tentang Kami
@@ -51,11 +51,11 @@
       <div class="card move-on-hover">
         <div class="card-body text-center">
           <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-            <i class="fas fa-palette opacity-10"></i>
+            <i class="fas fa-search opacity-10"></i>
           </div>
-          <h5 class="mt-3 mb-0">Koleksi Seni</h5>
-          <p>Jelajahi berbagai karya kerajinan anyaman eceng gondok dan mebel berkualitas tinggi.</p>
-          <a href="<?= base_url('gallery') ?>" class="btn btn-outline-primary mt-3">Lihat Koleksi</a>
+          <h5 class="mt-3 mb-0">Cari Lowongan</h5>
+          <p>Temukan berbagai posisi yang sesuai dengan keahlian dan minat Anda.</p>
+          <a href="<?= base_url('lowongan') ?>" class="btn btn-outline-primary mt-3">Mulai Mencari</a>
         </div>
       </div>
     </div>
@@ -63,11 +63,11 @@
       <div class="card move-on-hover">
         <div class="card-body text-center">
           <div class="icon icon-shape icon-lg bg-gradient-success shadow text-center border-radius-lg">
-            <i class="fas fa-water opacity-10"></i>
+            <i class="fas fa-user-plus opacity-10"></i>
           </div>
-          <h5 class="mt-3 mb-0">Rumah Terapung</h5>
-          <p>Nikmati pengalaman unik wisata alam dengan pemandangan yang memukau.</p>
-          <a href="<?= base_url('wisata') ?>" class="btn btn-outline-primary mt-3">Kunjungi</a>
+          <h5 class="mt-3 mb-0">Daftar Akun</h5>
+          <p>Buat akun untuk melamar pekerjaan dan mengelola profil karir Anda.</p>
+          <a href="<?= base_url('auth/daftar') ?>" class="btn btn-outline-primary mt-3">Daftar Sekarang</a>
         </div>
       </div>
     </div>
@@ -75,11 +75,11 @@
       <div class="card move-on-hover">
         <div class="card-body text-center">
           <div class="icon icon-shape icon-lg bg-gradient-warning shadow text-center border-radius-lg">
-            <i class="fas fa-graduation-cap opacity-10"></i>
+            <i class="fas fa-file-alt opacity-10"></i>
           </div>
-          <h5 class="mt-3 mb-0">Workshop</h5>
-          <p>Pelajari teknik anyaman tradisional langsung dari para master pengrajin.</p>
-          <a href="<?= base_url('workshop') ?>" class="btn btn-outline-primary mt-3">Daftar</a>
+          <h5 class="mt-3 mb-0">Proses Rekrutmen</h5>
+          <p>Pelajari tahapan-tahapan dalam proses seleksi kami untuk persiapan yang lebih baik.</p>
+          <a href="<?= base_url('kontak') ?>" class="btn btn-outline-primary mt-3">Lihat Proses</a>
         </div>
       </div>
     </div>
@@ -88,76 +88,33 @@
   <div class="row mt-5">
     <div class="col-12">
       <div class="card card-body border-0 shadow-xl mt-n5">
-        <h3 class="text-center">Koleksi Unggulan</h3>
-        <p class="text-center">Jelajahi karya kerajinan terbaik kami</p>
+        <h3 class="text-center">Lowongan Terbaru</h3>
+        <p class="text-center">Jangan lewatkan kesempatan untuk bergabung dengan tim kami</p>
 
         <div class="row mt-4">
-          <div class="col-md-4 mb-4">
-            <div class="card h-100">
-              <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
-                <div class="d-block blur-shadow-image">
-                  <img src="<?= base_url('assets/img/gallery/keranjang.jpg') ?>" alt="Keranjang Anyaman" class="img-fluid shadow border-radius-lg">
+          <?php if (empty($latest_jobs)) : ?>
+            <p class="text-center">Saat ini belum ada lowongan terbaru.</p>
+          <?php else : ?>
+            <?php foreach ($latest_jobs as $job) : ?>
+              <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                  <div class="card-body pt-3">
+                    <span class="badge bg-gradient-<?= $job->jenis_pekerjaan == 'penuh_waktu' ? 'success' : 'info' ?> mb-2"><?= $job->jenis_pekerjaan == 'penuh_waktu' ? 'Penuh Waktu' : 'Paruh Waktu' ?></span>
+                    <h5><?= $job->judul ?></h5>
+                    <p class="mb-0 text-sm"><i class="fas fa-map-marker-alt me-1"></i> <?= $job->lokasi ?></p>
+                    <p class="mb-0 text-sm"><i class="fas fa-calendar-alt me-1"></i> Batas: <?= date('d M Y', strtotime($job->batas_waktu)) ?></p>
+                    <div class="d-flex align-items-center mt-3">
+                      <a href="<?= base_url('lowongan/detail/' . $job->id) ?>" class="btn btn-outline-primary btn-sm mb-0">Lihat Detail</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="card-body pt-3">
-                <span class="badge bg-gradient-success mb-2">Bestseller</span>
-                <h5>Keranjang Anyaman Premium</h5>
-                <p class="mb-0 text-sm"><i class="fas fa-leaf me-1"></i> Bahan: Eceng Gondok</p>
-                <p class="mb-0 text-sm"><i class="fas fa-ruler me-1"></i> Ukuran: 30x25x20 cm</p>
-                <p class="mb-0 text-sm"><i class="fas fa-star me-1"></i> Rating: 4.8/5</p>
-                <div class="d-flex align-items-center mt-3">
-                  <a href="<?= base_url('gallery/detail/1') ?>" class="btn btn-outline-primary btn-sm mb-0">Lihat Detail</a>
-                  <span class="text-primary font-weight-bold ms-auto">Rp 150.000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4">
-            <div class="card h-100">
-              <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
-                <div class="d-block blur-shadow-image">
-                  <img src="<?= base_url('assets/img/gallery/set-meja.jpg') ?>" alt="Mebel Anyaman" class="img-fluid shadow border-radius-lg">
-                </div>
-              </div>
-              <div class="card-body pt-3">
-                <span class="badge bg-gradient-warning mb-2">Eksklusif</span>
-                <h5>Set Meja Kursi Anyaman</h5>
-                <p class="mb-0 text-sm"><i class="fas fa-leaf me-1"></i> Bahan: Eceng Gondok & Kayu</p>
-                <p class="mb-0 text-sm"><i class="fas fa-users me-1"></i> Kapasitas: 4 Orang</p>
-                <p class="mb-0 text-sm"><i class="fas fa-star me-1"></i> Rating: 4.9/5</p>
-                <div class="d-flex align-items-center mt-3">
-                  <a href="<?= base_url('gallery/detail/2') ?>" class="btn btn-outline-primary btn-sm mb-0">Lihat Detail</a>
-                  <span class="text-primary font-weight-bold ms-auto">Rp 2.500.000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4">
-            <div class="card h-100">
-              <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
-                <div class="d-block blur-shadow-image">
-                  <img src="<?= base_url('assets/img/gallery/hiasan-dinding.jpg') ?>" alt="Dekorasi Anyaman" class="img-fluid shadow border-radius-lg">
-                </div>
-              </div>
-              <div class="card-body pt-3">
-                <span class="badge bg-gradient-info mb-2">Terbaru</span>
-                <h5>Hiasan Dinding Anyaman</h5>
-                <p class="mb-0 text-sm"><i class="fas fa-leaf me-1"></i> Bahan: Eceng Gondok</p>
-                <p class="mb-0 text-sm"><i class="fas fa-palette me-1"></i> Desain: Motif Tradisional</p>
-                <p class="mb-0 text-sm"><i class="fas fa-star me-1"></i> Rating: 4.7/5</p>
-                <div class="d-flex align-items-center mt-3">
-                  <a href="<?= base_url('gallery/detail/3') ?>" class="btn btn-outline-primary btn-sm mb-0">Lihat Detail</a>
-                  <span class="text-primary font-weight-bold ms-auto">Rp 350.000</span>
-                </div>
-              </div>
-            </div>
-          </div>
+            <?php endforeach; ?>
+          <?php endif; ?>
         </div>
 
         <div class="text-center mt-4">
-          <a href="<?= base_url('gallery') ?>" class="btn bg-gradient-primary">Lihat Semua Koleksi</a>
+          <a href="<?= base_url('lowongan') ?>" class="btn bg-gradient-primary">Lihat Semua Lowongan</a>
         </div>
       </div>
     </div>
@@ -204,7 +161,7 @@
       <div class="card">
         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
           <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
-            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Mengapa Memilih Kami</h4>
+            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Mengapa Bergabung Dengan Kami</h4>
           </div>
         </div>
         <div class="card-body">
@@ -212,19 +169,19 @@
             <div class="col-md-6">
               <div class="info">
                 <div class="icon icon-sm">
-                  <i class="fas fa-leaf text-primary"></i>
+                  <i class="fas fa-user-md text-primary"></i>
                 </div>
-                <h5 class="font-weight-bolder mt-3">Ramah Lingkungan</h5>
-                <p>Menggunakan bahan alami eceng gondok yang berkelanjutan dan tidak merusak lingkungan.</p>
+                <h5 class="font-weight-bolder mt-3">Lingkungan Profesional</h5>
+                <p>Bekerja dalam lingkungan yang mendukung pengembangan profesionalisme dan keahlian.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info">
                 <div class="icon icon-sm">
-                  <i class="fas fa-hands text-primary"></i>
+                  <i class="fas fa-users text-primary"></i>
                 </div>
-                <h5 class="font-weight-bolder mt-3">Kerajinan Tangan</h5>
-                <p>Setiap produk dibuat dengan tangan terampil pengrajin berpengalaman puluhan tahun.</p>
+                <h5 class="font-weight-bolder mt-3">Kerja Tim Solid</h5>
+                <p>Berkolaborasi dengan tim yang solid dan berdedikasi dalam memberikan pelayanan terbaik.</p>
               </div>
             </div>
           </div>
@@ -232,19 +189,19 @@
             <div class="col-md-6">
               <div class="info">
                 <div class="icon icon-sm">
-                  <i class="fas fa-award text-primary"></i>
+                  <i class="fas fa-chart-line text-primary"></i>
                 </div>
-                <h5 class="font-weight-bolder mt-3">Kualitas Terjamin</h5>
-                <p>Produk berkualitas tinggi dengan standar internasional dan tahan lama.</p>
+                <h5 class="font-weight-bolder mt-3">Jenjang Karir</h5>
+                <p>Kami menyediakan jalur karir yang jelas dan kesempatan untuk berkembang.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info">
                 <div class="icon icon-sm">
-                  <i class="fas fa-heart text-primary"></i>
+                  <i class="fas fa-heartbeat text-primary"></i>
                 </div>
-                <h5 class="font-weight-bolder mt-3">Warisan Budaya</h5>
-                <p>Melestarikan tradisi anyaman Kalimantan Selatan dengan sentuhan modern.</p>
+                <h5 class="font-weight-bolder mt-3">Kontribusi Sosial</h5>
+                <p>Berikan dampak positif bagi masyarakat melalui pelayanan kesehatan yang berkualitas.</p>
               </div>
             </div>
           </div> 

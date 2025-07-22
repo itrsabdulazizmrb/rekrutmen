@@ -3,8 +3,8 @@
         <div class="row">
           <!-- About Section -->
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <h6 class="text-uppercase mb-4">Gallery Kembang Ilung</h6>
-            <p class="mb-4">Galeri seni yang menampilkan karya-karya terbaik dari seniman lokal dan internasional. Kami berkomitmen untuk mempromosikan seni dan budaya.</p>
+            <h6 class="text-uppercase mb-4">Rekrutmen RSUD H. Abdul Aziz Marabahan</h6>
+            <p class="mb-4">Sistem rekrutmen online untuk menjaring tenaga profesional yang berintegritas dan kompeten untuk bergabung bersama kami.</p>
             <div class="social-icons">
               <a href="#" class="btn btn-icon-only btn-pill btn-facebook me-2" type="button" aria-label="Facebook">
                 <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
@@ -23,25 +23,24 @@
 
           <!-- Quick Links -->
           <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-            <h6 class="text-uppercase mb-4">Menu Utama</h6>
+            <h6 class="text-uppercase mb-4">Tautan Cepat</h6>
             <ul class="footer-links list-unstyled">
               <li class="mb-2"><a href="<?= base_url() ?>" class="text-decoration-none">Beranda</a></li>
-              <li class="mb-2"><a href="<?= base_url('gallery') ?>" class="text-decoration-none">Galeri</a></li>
-              <li class="mb-2"><a href="<?= base_url('exhibitions') ?>" class="text-decoration-none">Pameran</a></li>
-              <li class="mb-2"><a href="<?= base_url('artists') ?>" class="text-decoration-none">Seniman</a></li>
-              <li class="mb-2"><a href="<?= base_url('about') ?>" class="text-decoration-none">Tentang Kami</a></li>
+              <li class="mb-2"><a href="<?= base_url('lowongan') ?>" class="text-decoration-none">Lowongan</a></li>
+              <li class="mb-2"><a href="<?= base_url('blog') ?>" class="text-decoration-none">Blog</a></li>
+              <li class="mb-2"><a href="<?= base_url('tentang') ?>" class="text-decoration-none">Tentang Kami</a></li>
+              <li class="mb-2"><a href="<?= base_url('kontak') ?>" class="text-decoration-none">Kontak</a></li>
             </ul>
           </div>
 
           <!-- Services -->
           <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <h6 class="text-uppercase mb-4">Layanan</h6>
+            <h6 class="text-uppercase mb-4">Informasi</h6>
             <ul class="footer-links list-unstyled">
-              <li class="mb-2"><a href="<?= base_url('collections') ?>" class="text-decoration-none">Koleksi Seni</a></li>
-              <li class="mb-2"><a href="<?= base_url('events') ?>" class="text-decoration-none">Acara & Workshop</a></li>
-              <li class="mb-2"><a href="<?= base_url('rental') ?>" class="text-decoration-none">Sewa Ruang</a></li>
-              <li class="mb-2"><a href="<?= base_url('consultation') ?>" class="text-decoration-none">Konsultasi Seni</a></li>
-              <li class="mb-2"><a href="<?= base_url('contact') ?>" class="text-decoration-none">Hubungi Kami</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none">Proses Rekrutmen</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none">Pertanyaan Umum (FAQ)</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none">Kebijakan Privasi</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none">Syarat & Ketentuan</a></li>
             </ul>
           </div>
 
@@ -51,19 +50,19 @@
             <ul class="footer-links list-unstyled">
               <li class="mb-2">
                 <i class="fas fa-map-marker-alt me-2 text-primary"></i>
-                <span>Desa Banyu Hirang, Kecamatan Amuntai Selatan, Kabupaten Hulu Sungai Tengah, Kalimantan Selatan</span>
+                <span>Jl. Jenderal Sudirman No. 1, Marabahan, Kalimantan Selatan</span>
               </li>
               <li class="mb-2">
                 <i class="fas fa-phone me-2 text-primary"></i>
-                <span>+62 21 1234 5678</span>
+                <span>(0511) 123-456</span>
               </li>
               <li class="mb-2">
                 <i class="fas fa-envelope me-2 text-primary"></i>
-                <span>info@gallerykembangilung.com</span>
+                <span>rekrutmen@rsud-marabahan.go.id</span>
               </li>
               <li class="mb-2">
                 <i class="fas fa-clock me-2 text-primary"></i>
-                <span>Senin - Minggu: 08:00 - 17:00</span>
+                <span>Senin - Jumat: 08:00 - 16:00 WITA</span>
               </li>
             </ul>
           </div>
@@ -75,7 +74,7 @@
           <div class="col-12">
             <div class="text-center">
               <p class="mb-0 text-muted">
-                © <script>document.write(new Date().getFullYear())</script> Radina. All rights reserved.
+                © <script>document.write(new Date().getFullYear())</script> RSUD H. Abdul Aziz Marabahan. All rights reserved.
               </p>
             </div>
           </div>

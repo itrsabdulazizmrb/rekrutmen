@@ -8,7 +8,7 @@
           </div>
           <div>
             <h6 class="mb-0">Knowledge Base</h6>
-            <p class="text-sm mb-0">Standar coding, konvensi, dan best practices SIREK</p>
+            <p class="text-sm mb-0">Standar coding, konvensi, dan best practices sistem rekrutmen RSUD H. Abdul Aziz Marabahan</p>
           </div>
         </div>
       </div>

@@ -90,7 +90,7 @@
               <a href="https://www.facebook.com/sharer/sharer.php?u=<?= current_url() ?>" target="_blank" class="btn btn-facebook btn-icon-only me-2">
                 <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
               </a>
-              <a href="https://twitter.com/intent/tweet?url=<?= current_url() ?>&text=<?= $post->judul ?> - Gallery Kembang Ilung" target="_blank" class="btn btn-twitter btn-icon-only me-2">
+              <a href="https://twitter.com/intent/tweet?url=<?= current_url() ?>&text=<?= $post->judul ?> - Rekrutmen RSUD H. Abdul Aziz Marabahan" target="_blank" class="btn btn-twitter btn-icon-only me-2">
                 <span class="btn-inner--icon"><i class="fab fa-twitter"></i></span>
               </a>
               <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?= current_url() ?>" target="_blank" class="btn btn-linkedin btn-icon-only me-2">
@@ -99,7 +99,7 @@
               <a href="https://wa.me/?text=<?= $post->judul ?> - <?= current_url() ?>" target="_blank" class="btn btn-whatsapp btn-icon-only me-2">
                 <span class="btn-inner--icon"><i class="fab fa-whatsapp"></i></span>
               </a>
-              <a href="mailto:?subject=<?= $post->judul ?> - Gallery Kembang Ilung&body=Baca artikel ini: <?= current_url() ?>" class="btn btn-google-plus btn-icon-only">
+              <a href="mailto:?subject=<?= $post->judul ?> - Rekrutmen RSUD H. Abdul Aziz Marabahan&body=Baca artikel ini: <?= current_url() ?>" class="btn btn-google-plus btn-icon-only">
                 <span class="btn-inner--icon"><i class="fas fa-envelope"></i></span>
               </a>
             </div>
