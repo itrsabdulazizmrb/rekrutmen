@@ -83,6 +83,39 @@
   </div>
 </div>
 
+<?php
+$show_cetak_kartu = false;
+$id_lamaran_seleksi = null;
+$tanggal_ujian = null;
+if (!empty($applications)) {
+    foreach ($applications as $app) {
+        if ($app->status == 'seleksi') {
+            // Cek tanggal penilaian (jika ada di $app)
+            if (!empty($app->tanggal_penilaian)) {
+                $show_cetak_kartu = true;
+                $id_lamaran_seleksi = $app->id;
+                $tanggal_ujian = $app->tanggal_penilaian;
+                break;
+            }
+        }
+    }
+}
+?>
+<div class="row mb-3">
+  <div class="col-12">
+    <div class="alert alert-info" style="font-size:15px;">
+      <i class="fa fa-info-circle"></i>
+      <b>Kartu Peserta Ujian wajib dicetak dan dibawa saat ujian.</b><br>
+      Kartu Peserta akan muncul di menu Lamaran setelah Anda dinyatakan lolos tahap administrasi dan telah mendapatkan jadwal tes.
+    </div>
+    <?php if ($show_cetak_kartu && $id_lamaran_seleksi): ?>
+      <a href="<?= base_url('pelamar/cetak_kartu_peserta/' . $id_lamaran_seleksi) ?>" target="_blank" class="btn btn-success">
+        <i class="fa fa-id-card"></i> Cetak Kartu Peserta Ujian
+      </a>
+    <?php endif; ?>
+  </div>
+</div>
+
 <div class="row mt-4">
   <div class="col-lg-8 mb-lg-0 mb-4">
     <div class="card">

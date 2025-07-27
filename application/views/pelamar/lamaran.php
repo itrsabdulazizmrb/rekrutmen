@@ -55,8 +55,13 @@
                     </td>
                     <td class="align-middle">
                         <a href="<?= base_url('pelamar/detail-lamaran/' . $application->id) ?>" class="btn btn-sm btn-outline-primary" data-toggle="tooltip" data-original-title="Lihat detail">
-    <i class="fas fa-fw fa-eye"></i> Lihat Detail
-  </a>
+                            <i class="fas fa-fw fa-eye"></i> Lihat Detail
+                        </a>
+                        <?php if ($application->status == 'seleksi') : ?>
+                            <a href="<?= base_url('pelamar/cetak_kartu_peserta/' . $application->id) ?>" class="btn btn-sm btn-success mt-1" target="_blank" data-toggle="tooltip" data-original-title="Cetak Kartu Peserta">
+                                <i class="fa fa-id-card"></i> Cetak Kartu Peserta
+                            </a>
+                        <?php endif; ?>
                     </td>
                   </tr>
                 <?php endforeach; ?>

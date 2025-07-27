@@ -6,26 +6,11 @@
                 © <script>
                   document.write(new Date().getFullYear())
                 </script>,
-                dibuat dengan<i class="fa fa-heart"></i> oleh
-                <a href="javascript:;" class="font-weight-bold">Radina</a>
+                made with <i class="fa fa-heart"></i> by
+                <a href="javascript:;" class="font-weight-bold">ITR RSHAA</a>
               </div>
             </div>
-            <div class="col-lg-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="<?= base_url() ?>" class="nav-link text-muted">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('home/tentang') ?>" class="nav-link text-muted">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('home/blog') ?>" class="nav-link text-muted">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('home/kontak') ?>" class="nav-link pe-0 text-muted">Contact</a>
-                </li>
-              </ul>
-            </div>
+            
           </div>
         </div>
       </footer>

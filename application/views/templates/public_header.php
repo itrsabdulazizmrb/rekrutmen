@@ -40,7 +40,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link d-flex align-items-center me-2 <?= $this->uri->segment(2) == '' ? 'active' : '' ?>" href="<?= base_url() ?>">
               <i class="fa fa-home opacity-6 text-white me-1"></i>
               Beranda
@@ -69,7 +69,7 @@
               <i class="fa fa-envelope opacity-6 text-white me-1"></i>
               Kontak
             </a>
-          </li>
+          </li> -->
         </ul>
         <ul class="navbar-nav d-lg-block d-none">
           <?php if ($this->session->userdata('logged_in')) : ?>

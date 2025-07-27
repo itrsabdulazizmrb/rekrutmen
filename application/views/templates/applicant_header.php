@@ -45,6 +45,25 @@
             <span class="nav-link-text ms-1">Dasbor</span>
           </a>
         </li>
+      <?php
+        // Ambil id lamaran seleksi jika ada, jika tidak ambil id lamaran pertama, jika tidak ada lamaran arahkan ke dasbor
+        $CI =& get_instance();
+        $CI->load->model('model_lamaran');
+        $user_id = $this->session->userdata('user_id');
+        $applications = $CI->model_lamaran->dapatkan_lamaran_pelamar($user_id);
+        $id_lamaran_cetak = null;
+        if (!empty($applications)) {
+          foreach ($applications as $app) {
+            if ($app->status == 'seleksi') {
+              $id_lamaran_cetak = $app->id;
+              break;
+            }
+          }
+          if (!$id_lamaran_cetak) {
+            $id_lamaran_cetak = $applications[0]->id;
+          }
+        }
+      ?>
         <li class="nav-item">
           <a class="nav-link <?= $this->uri->segment(2) == 'profil' ? 'active' : '' ?>" href="<?= base_url('pelamar/profil') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -209,3 +228,32 @@
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       <?php endif; ?>
+
+<?php
+$show_cetak_kartu = false;
+$id_lamaran_seleksi = null;
+if (isset($this->session) && $this->session->userdata('user_id')) {
+    $CI =& get_instance();
+    $CI->load->model('model_lamaran');
+    $CI->load->model('model_penilaian');
+    $user_id = $this->session->userdata('user_id');
+    $applications = $CI->model_lamaran->dapatkan_lamaran_pelamar($user_id);
+    if (!empty($applications)) {
+        foreach ($applications as $app) {
+            if ($app->status == 'seleksi') {
+                // Cek penilaian_pelamar untuk lamaran ini
+                $penilaian_list = $CI->model_penilaian->dapatkan_penilaian_pelamar($app->id);
+                if (!empty($penilaian_list)) {
+                    foreach ($penilaian_list as $penilaian) {
+                        if (!empty($penilaian->tanggal_penilaian)) {
+                            $show_cetak_kartu = true;
+                            $id_lamaran_seleksi = $app->id;
+                            break 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+?>

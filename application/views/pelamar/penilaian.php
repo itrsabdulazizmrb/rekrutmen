@@ -81,9 +81,14 @@
                               Belum Waktunya
                             </button>
                           <?php else : ?>
-                            <a href="<?= base_url('pelamar/ikuti-penilaian/' . $assessment->id_penilaian . '/' . $assessment->id_lamaran) ?>" class="btn btn-sm btn-primary mt-1 w-100 start-button" id="start-button-<?= $assessment->id_penilaian ?>-<?= $assessment->id_lamaran ?>" data-assessment-id="<?= $assessment->id_penilaian ?>" data-application-id="<?= $assessment->id_lamaran ?>">
-                              <?= ($assessment->status == 'belum_mulai' || $assessment->status == 'not_started') ? 'Ikuti Penilaian' : 'Lanjutkan' ?>
-                            </a>
+                            <div class="d-flex gap-2">
+                              <a href="<?= base_url('pelamar/ikuti-penilaian/' . $assessment->id_penilaian . '/' . $assessment->id_lamaran) ?>" class="btn btn-sm btn-primary mt-1 w-100 start-button" id="start-button-<?= $assessment->id_penilaian ?>-<?= $assessment->id_lamaran ?>" data-assessment-id="<?= $assessment->id_penilaian ?>" data-application-id="<?= $assessment->id_lamaran ?>">
+                                <?= ($assessment->status == 'belum_mulai' || $assessment->status == 'not_started') ? 'Ikuti Penilaian' : 'Lanjutkan' ?>
+                              </a>
+                              <a href="<?= base_url('pelamar/cetak_kartu_peserta/' . $assessment->id_lamaran) ?>" class="btn btn-sm btn-success mt-1 w-100" target="_blank">
+                                <i class="fa fa-id-card"></i> Cetak Kartu
+                              </a>
+                            </div>
                           <?php endif; ?>
                         </div>
                       <?php else : ?>

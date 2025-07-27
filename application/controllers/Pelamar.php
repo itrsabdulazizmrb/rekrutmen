@@ -1458,4 +1458,49 @@ class Pelamar extends CI_Controller {
         readfile($file_path);
         exit;
     }
+
+    public function cetak_kartu_peserta($id_lamaran) {
+        $user_id = $this->session->userdata('user_id');
+        $lamaran = $this->model_lamaran->dapatkan_lamaran($id_lamaran);
+        if (!$lamaran || $lamaran->id_pelamar != $user_id || $lamaran->status != 'seleksi') {
+            show_404();
+        }
+        // Ambil semua penilaian pelamar untuk lamaran ini
+        $penilaian_list = $this->model_penilaian->dapatkan_penilaian_pelamar($id_lamaran);
+        $tanggal_ujian = null;
+        if (!empty($penilaian_list)) {
+            foreach ($penilaian_list as $penilaian) {
+                if (!empty($penilaian->tanggal_penilaian)) {
+                    $tanggal_ujian = $penilaian->tanggal_penilaian;
+                    break;
+                }
+            }
+        }
+        $profile = $this->model_pelamar->dapatkan_profil($user_id);
+        $user = $this->model_pengguna->dapatkan_pengguna($user_id);
+        $foto_profil = $user->foto_profil ?? '';
+        $alamat = isset($user->alamat) ? $user->alamat : (isset($profile->alamat) ? $profile->alamat : '-');
+        if (!$tanggal_ujian) {
+            echo "<html><head><title>Kartu Peserta Belum Tersedia</title><script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script></head><body><script>Swal.fire({icon: 'info',title: 'Kartu Peserta Belum Tersedia',html: 'Kartu peserta dapat dicetak setelah tanggal tes ditetapkan.<br>Harap cek secara berkala.',confirmButtonText: 'OK'}).then(function(){window.location.href='" . base_url('pelamar/lamaran') . "';});</script></body></html>";
+            return;
+        }
+        // Generate No Peserta: tglujian-tgllahir-idlamaran
+        $tgl_ujian = date('Ymd', strtotime($tanggal_ujian));
+        $tgl_lahir = date('Ymd', strtotime($profile->tanggal_lahir));
+        $no_peserta = $tgl_ujian.'-'.$tgl_lahir.'-'.$lamaran->id;
+        // QR Code: Nama + tanggal ujian
+        $qr_data = 'Kartu Ujian Asli\nNama: '.$user->nama_lengkap.'\nTanggal Ujian: '.date('d-m-Y', strtotime($tanggal_ujian));
+        $data = [
+            'no_peserta' => $no_peserta,
+            'nama' => $user->nama_lengkap,
+            'tanggal_ujian' => $tanggal_ujian,
+            'alamat' => $alamat,
+            'tanggal_lahir' => $profile->tanggal_lahir,
+            'telepon' => $user->telepon,
+            'jenis_kelamin' => $profile->jenis_kelamin,
+            'foto_profil' => $foto_profil,
+            'qr_data' => $qr_data
+        ];
+        $this->load->view('pelamar/kartu_peserta', $data);
+    }
 }
